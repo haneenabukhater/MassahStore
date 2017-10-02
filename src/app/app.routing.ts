@@ -8,7 +8,7 @@ const APP_ROUTES: Routes = [
 
   { path: '', component: WelcomeComponent },
   { path: 'products', component: ProductListComponent },
-  { path: 'products:id', component: ProductDetailComponent}
+  { path: 'products/:id', component: ProductDetailComponent}
 
 ];
 
