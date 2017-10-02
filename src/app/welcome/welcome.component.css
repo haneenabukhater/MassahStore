@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+}
+.flexy {
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+.flexin {
+  flex-direction: row;
+  flex: none;
+}

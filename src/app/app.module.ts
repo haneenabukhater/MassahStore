@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { CarouselComponent } from './welcome/carousel/carousel.component';
+import {CarouselComponent } from './welcome/carousel/carousel.component';
 
 @NgModule({
   declarations: [
