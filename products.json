@@ -1,4 +1,4 @@
-[
+{"products" : [
   {
     "Handle": "teal-crinkle",
     "Title": "Teal Crinkle",
@@ -2623,5 +2623,5 @@
     "Image_Alt_Text": "",
     "Variant_Weight_Unit": "",
     "Variant_Tax_Code": ""
-  }
-]
+  }]
+}
