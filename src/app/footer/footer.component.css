@@ -10,6 +10,10 @@
   display:table-cell;
 }
 
+.first {
+  padding-left: 100px;
+}
+
 li {
   list-style: none;
   font-weight: bold;
