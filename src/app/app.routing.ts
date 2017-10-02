@@ -6,10 +6,18 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 const APP_ROUTES: Routes = [
 
-  { path: '', component: WelcomeComponent },
-  { path: 'products', component: ProductListComponent },
-  { path: 'products/:id', component: ProductDetailComponent}
-
+  {
+    path: '',
+    component: WelcomeComponent
+  },
+  {
+    path: 'products',
+    component: ProductListComponent
+  },
+  {
+    path: 'products/:id',
+    component: ProductDetailComponent
+  }
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
