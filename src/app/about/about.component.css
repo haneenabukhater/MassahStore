@@ -1,0 +1,12 @@
+h3{
+  text-align: center;
+}
+p{
+  color: #788188;
+  margin: 0 0 19.44444px;
+}
+.flexbox{
+  text-align: center;
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}
+@media only screen and (max-width: 749px){p{font-size:0.9375em}}
