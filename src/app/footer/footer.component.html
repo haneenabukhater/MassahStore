@@ -1,14 +1,14 @@
-<div class="outer">
-  <div class="row">
-    <div class="col-md-3 first">
+<div class="total">
+  <div class="outer">
+    <div class="item"></div>
+    <div class="item">
       <ul>
         <li><a href="#"><p>About Us</p></a></li>
         <li><a href="#"><p>Scarves</p></a></li>
         <li><a href="#"><p>Accesories</p></a></li>
       </ul>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-3">
+    <div class="item">
       <li><a href="#"><p>Contact Us</p></a></li>
       <li><p>Follow Us On Media</p></li>
       <a href="#" class="fa fa-facebook"></a>
@@ -16,10 +16,11 @@
       <a href="#" class="fa fa-youtube"></a>
       <a href="#" class="fa fa-instagram"></a>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-3">
+    <div class="item">
       <li><p>Subscribe</p></li>
-      <input id="userEmail" type="email" placeholder="Enter your email address"><input type="submit">
+      <input #userEmail type="email" (keyup)="onKeyup($event)" placeholder="Enter your email address" style="width: 260px;">
+      <button (click)="submitEmail(); userEmail.value='';">Submit</button>
+      <p id="errorMessage"></p>
     </div>
   </div>
   <hr>
