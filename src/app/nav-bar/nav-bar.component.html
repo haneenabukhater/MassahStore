@@ -16,26 +16,26 @@
           <a class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Collections</a>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
            <p>
-             <a class="dropdown-item" routerLink="products">All</a>
+             <a class="dropdown-item" routerLink="products/all">All</a>
            </p>
            <p>
-             <a class="dropdown-item" routerLink="scarfs">Scarfs</a>
+             <a class="dropdown-item" routerLink="products/scarf">Scarfs</a>
            </p>
            <p>
-             <a class="dropdown-item" routerLink="accessories">Accessories</a>
+             <a class="dropdown-item" routerLink="products/accessories">Accessories</a>
            </p>
-           <p>
-             <a class="dropdown-item" routerLink="new">New Releases</a>
-           </p>
-           <p>
-             <a class="dropdown-item" routerLink="sale">On Sale!</a>
-           </p>
+           <!-- <p>
+             <a class="dropdown-item" routerLink="products/new">New Releases</a>
+           </p> -->
+           <!-- <p>
+             <a class="dropdown-item" routerLink="products/sale">On Sale!</a>
+           </p> -->
          </div>
         </li>
         <li class="nav-item">
           <a routerLink="contact">Contact Us</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="cart">
           <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</a>
         </li>
         <li class="nav-item">
