@@ -17,6 +17,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductListComponent } from './product-list/product-list.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
+import { FilterDuplicatesPipe } from './filter-duplicates.pipe';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +38,10 @@ export const firebaseConfig = {
     ProductDetailComponent,
     ProductListComponent,
     CheckoutComponent,
-    CartComponent
+    CartComponent,
+    AboutComponent,
+    ContactComponent,
+    FilterDuplicatesPipe
   ],
   imports: [
     BrowserModule,
