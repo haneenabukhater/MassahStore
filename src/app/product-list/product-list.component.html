@@ -1,8 +1,6 @@
 <div class="flexParent">
-  <div *ngFor = "let product of products | async" class="flexChild" (click)="goToDetailProduct" class="panel panel-default">
-    <div *ngIf= "product.Title" class="panel-body">
-      <h3 (click) = "goToDetailProduct">{{product.Title}}</h3>
-      <img src={{product.Image_Src}} alt="" width="300px" height="400px">
-    </div>
+  <div *ngFor = "let product of products | filterDuplicates" class="flexChild" (click)="goToDetailProduct" class="panel panel-default">
+    <h3 (click) = "goToDetailProduct">{{product.Title}}</h3>
+    <img src={{product.Image_Src}} alt="" width="300px" height="400px">
   </div>
 </div>

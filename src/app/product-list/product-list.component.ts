@@ -13,16 +13,15 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class ProductListComponent implements OnInit {
   currentRoute: string = this.router.url;
-  products: FirebaseListObservable<any[]>;
+  products: any[];
 
   constructor(private router: Router, private productService: ProductService) { }
 
   ngOnInit() {
-    this.products = this.productService.getProducts();
-  }
+    this.productService.getProducts().subscribe( lastData => {
+      this.products = lastData;
+    });
 
-  // goToDetailProduct(clickedProduct: Product){
-  //   this.router.navigate(['products', clickedProduct.$key]);
-  // };
+  }
 
 }
