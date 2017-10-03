@@ -1,0 +1,8 @@
+.flexParent {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+}
+.flexChild {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}
