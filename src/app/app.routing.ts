@@ -6,6 +6,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CartComponent } from './cart/cart.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 
 const APP_ROUTES: Routes = [
 
@@ -32,6 +33,10 @@ const APP_ROUTES: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
