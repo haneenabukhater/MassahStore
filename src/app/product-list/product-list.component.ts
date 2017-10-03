@@ -21,8 +21,8 @@ export class ProductListComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  // goToDetailProduct(clickedProduct: Product){
-  //   this.router.navigate(['products', clickedProduct.$key]);
-  // };
+  goToDetailPage(clickedProduct: Product){
+    this.router.navigate(['products', clickedProduct.$key]);
+  };
 
 }

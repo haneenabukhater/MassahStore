@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Product } from '../product.model';
@@ -11,6 +12,8 @@ import { ProductService } from '../product.service';
   providers: [ProductService]
 })
 export class ProductDetailComponent implements OnInit {
+  productId: string;
+  productToDisplay: Product;
 
   constructor(private route: ActivatedRoute,
               private location: Location,
@@ -18,6 +21,10 @@ export class ProductDetailComponent implements OnInit {
 ) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.productId = urlParameters['$key'];
+    });
+    this.productToDisplay = this.productService.getProductById(this.productId);
   }
 
 }
