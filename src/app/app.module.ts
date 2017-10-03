@@ -15,6 +15,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './welcome/carousel/carousel.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { CartComponent } from './cart/cart.component';
 import { FilterDuplicatesPipe } from './filter-duplicates.pipe';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -35,6 +37,8 @@ export const firebaseConfig = {
     CarouselComponent,
     ProductDetailComponent,
     ProductListComponent,
+    CheckoutComponent,
+    CartComponent,
     AboutComponent,
     ContactComponent,
     FilterDuplicatesPipe

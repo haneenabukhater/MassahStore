@@ -1,0 +1,69 @@
+h1 {
+  text-align: center;
+}
+.flexy {
+  font-family: sans-serif;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding-bottom: 250px;
+}
+.flexin {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+  max-width: 30%;
+  flex-basis: 33%;
+  /*align-self: left;*/
+}
+a {
+  /*margin-bottom: 8px;
+  margin-right: 8px;*/
+  text-decoration: none;
+  color: black;
+}
+
+a:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 50em) {
+  a {
+    width: calc(25% - 6px);
+  }
+
+  a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  a:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+a:hover img {
+  transform: scale(1.15);
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+figcaption {
+  margin-top: 15px;
+}
+
+img {
+  margin: 0;
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+}
+.shop-now {
+  text-align: center;
+}
