@@ -7,20 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   public userEmail;
+  public inputtedEmail;
   constructor() { }
 
   ngOnInit() {
   }
 
   onKeyup(event) {
-    this.userEmail = event.target.value;
-    if (this.userEmail === '' || this.userEmail.indexOf('@') === -1 ||  this.userEmail.indexOf('.') === -1) {
+    var button =   <HTMLInputElement> document.getElementById("submitButton");
+    button.disabled = true;
+    this.userEmail = event.target.value.trim();
+    if (this.userEmail.length < 6 || this.userEmail.indexOf('@') === -1 ||  this.userEmail.indexOf('.') === -1 ||  this.userEmail.indexOf(' ') > -1) {
       document.getElementById("errorMessage").innerHTML = "Enter the valid email";
     } else {
       document.getElementById("errorMessage").innerHTML = "";
+      button.disabled = false;
     }
 }
 
   submitEmail() {
+    this.inputtedEmail = this.userEmail;
+    document.getElementById("errorMessage").innerHTML = "Your email has been recorded!";
   }
 }
