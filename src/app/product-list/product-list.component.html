@@ -1,6 +1,12 @@
 <div class="flexParent">
+
   <div *ngFor = "let product of products | filterDuplicates" class="flexChild" (click)="goToDetailProduct" class="panel panel-default">
-    <h3 (click) = "goToDetailProduct">{{product.Title}}</h3>
     <img src={{product.Image_Src}} alt="" width="300px" height="400px">
+    <div class="panel-footer">
+      <h3 (click) = "goToDetailProduct">{{product.Title}}</h3>
+      <h4>${{product.Variant_Price}}</h4>
+    </div>
+
   </div>
+
 </div>

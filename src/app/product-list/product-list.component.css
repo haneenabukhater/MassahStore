@@ -6,3 +6,7 @@
 .flexChild {
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
 }
+
+.panel-footer {
+  text-align: center;
+}

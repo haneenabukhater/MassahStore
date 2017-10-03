@@ -8,6 +8,7 @@ import { ProductService } from './product.service';
 export class FilterDuplicatesPipe implements PipeTransform {
 
   transform(input: any, args?: any): any {
+    console.log(input);
     return input.filter(e => e.Body);
   }
 
