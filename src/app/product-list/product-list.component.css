@@ -8,6 +8,11 @@
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
 }
 
+.flexChild:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
 .panel-footer {
   text-align: center;
 }
