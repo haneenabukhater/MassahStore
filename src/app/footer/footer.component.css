@@ -1,22 +1,25 @@
-.outer {
+.total {
   background-color: grey;
-  color: white;
-  padding: 10px;
+  padding-bottom: 10px;
+}
+.outer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
-.col-md-3 {
-  text-align: justify;
-  margin: 20px;
-  display:table-cell;
-}
-
-.first {
-  padding-left: 100px;
+.item {
+  flex-grow: 1;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 li {
   list-style: none;
   font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
 }
  a {
   color: white;
@@ -27,6 +30,11 @@ li {
   margin: 0px;
   padding: 0;
   fontext-align: center;
+  font-weight: bold;
+ }
+
+ #errorMessage {
+   padding-top: 15px;
  }
 
  #userEmail {
@@ -43,6 +51,7 @@ li {
   border: 0;
   -webkit-appearance: none;
   display: inline;
+  color: white;
 }
 
 /* Social icons*/
