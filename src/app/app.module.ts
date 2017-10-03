@@ -15,6 +15,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './welcome/carousel/carousel.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { FilterDuplicatesPipe } from './filter-duplicates.pipe';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +34,10 @@ export const firebaseConfig = {
     NavBarComponent,
     CarouselComponent,
     ProductDetailComponent,
-    ProductListComponent
+    ProductListComponent,
+    AboutComponent,
+    ContactComponent,
+    FilterDuplicatesPipe
   ],
   imports: [
     BrowserModule,
