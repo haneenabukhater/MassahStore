@@ -20,6 +20,9 @@ import { CartComponent } from './cart/cart.component';
 import { FilterDuplicatesPipe } from './filter-duplicates.pipe';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { FilterTypePipe } from './filter-type.pipe';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,7 +44,9 @@ export const firebaseConfig = {
     CartComponent,
     AboutComponent,
     ContactComponent,
-    FilterDuplicatesPipe
+    FilterDuplicatesPipe,
+    LoginComponent,
+    FilterTypePipe
   ],
   imports: [
     BrowserModule,
