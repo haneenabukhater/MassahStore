@@ -33,7 +33,7 @@ export class ProductListComponent implements OnInit {
     })
   }
   productWasClicked(clickedProduct) {
-    this.myRouter.navigate(['products/item', clickedProduct.Handle]);
+    this.myRouter.navigate(['products/item', clickedProduct.$key]);
   }
   nextPage() {
     this.cycleProducts(12);

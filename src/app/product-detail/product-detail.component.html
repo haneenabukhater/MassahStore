@@ -1,5 +1,14 @@
+<div class="flexinTwo container">
 
-<div>
-  <h3>{{(productToDisplay | async)?.Title}}</h3>
-  <h4>{{(productToDisplay | async)?.Body}}</h4>
+  <div class="electricBoogaloo">
+    <img src={{productToDisplay.Image_Src}} alt="" width="300px" height="400px">
+  </div>
+  <div class="electricBoogaloo">
+    <h3 >{{productToDisplay.Title}}</h3>
+    <button (click)="printBody($event)" name="button">Show Details</button>
+    <p id="homies"></p>
+    <h4>${{productToDisplay.Variant_Price}}.00</h4>
+    <button type="button" (click)="addToCart()" >Add to cart</button>
+    <button type="button" (click)="checkMyCart()">Check My Cart</button>
+  </div>
 </div>
