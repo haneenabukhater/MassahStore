@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   -webkit-flex-direction: row;
   flex-direction: row;
-  padding-bottom: 250px;
 }
 .electricBoogaloo {
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
