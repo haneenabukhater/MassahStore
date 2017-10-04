@@ -19,7 +19,7 @@ const APP_ROUTES: Routes = [
     component: ProductListComponent
   },
   {
-    path: 'products/:id',
+    path: 'products/item/:id',
     component: ProductDetailComponent
   },
   {

@@ -15,21 +15,36 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class ProductListComponent implements OnInit {
   category: string;
   products: any[];
-  homies: number = .8;
+  // nextButton: boolean = true;
+  backButton: boolean = false;
+  num1: number = 0;
+  num2: number = 11;
 
   constructor(private currentRoute: ActivatedRoute,
-              private productService: ProductService
+              private productService: ProductService,
+              private myRouter: Router
             ) { }
-
   ngOnInit() {
-
     this.productService.getProducts().subscribe( lastData => {
       this.products = lastData;
     });
-
     this.currentRoute.params.forEach( parameters => {
       this.category = parameters['category'];
     })
-
+  }
+  productWasClicked(clickedProduct) {
+    this.myRouter.navigate(['products/item', clickedProduct.$key]);
+  }
+  nextPage() {
+    this.cycleProducts(12);
+    this.backButton = true;
+  }
+  backPage() {
+    this.cycleProducts(-12);
+  }
+  cycleProducts(input) {
+    this.num1 += input;
+    this.num2 += input;
+    if (this.num1 === 0) this.backButton = false;
   }
 }

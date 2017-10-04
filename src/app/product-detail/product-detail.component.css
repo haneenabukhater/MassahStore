@@ -1,0 +1,15 @@
+.flexinTwo {
+  font-family: sans-serif;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding-bottom: 250px;
+}
+.electricBoogaloo {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+  max-width: 30%;
+  flex-basis: 33%;
+  /*align-self: left;*/
+}
