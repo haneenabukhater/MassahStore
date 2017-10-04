@@ -20,6 +20,7 @@ import { CartComponent } from './cart/cart.component';
 import { FilterDuplicatesPipe } from './filter-duplicates.pipe';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 import { FilterTypePipe } from './filter-type.pipe';
 
 
@@ -44,6 +45,7 @@ export const firebaseConfig = {
     AboutComponent,
     ContactComponent,
     FilterDuplicatesPipe,
+    LoginComponent,
     FilterTypePipe
   ],
   imports: [
