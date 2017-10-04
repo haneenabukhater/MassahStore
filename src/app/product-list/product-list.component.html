@@ -1,4 +1,11 @@
+<div class="container nav-buttons">
+  <button *ngIf="backButton" (click)="backPage()" class="btn btn-primary">Previous</button>
+  <button *ngIf="nextButton" (click)="nextPage()" class="btn btn-warning">Next Page</button>
+</div>
+
+
 <div class="flexParent">
+
   <div *ngFor = "let product of products
                 | filterDuplicates | filterType:category | slice:num1:num2; let i=index"
                 class="flexChild"
@@ -6,19 +13,13 @@
                 class="panel panel-default"
 
   >
+  <app-product-buttons [childIndexValue]="i"
+                        (indexChecker)="evaluateNextButton($event)"
+                        ></app-product-buttons>
     <img src={{product.Image_Src}} alt="" width="300px" height="400px">
     <div class="panel-footer">
       <h3 (click) = "goToDetailProduct">{{product.Title}}</h3>
       <h4 >${{product.Variant_Price}}</h4>
     </div>
-    <button *ngIf="i >=10" (click)="nextPage()" class="btn btn-warning">Next</button>
-  </div>
-
-
-
-
-  <div class="container nav-buttons">
-    <button *ngIf="backButton" (click)="backPage()" class="btn btn-primary">Back</button>
-    <!-- <button *ngIf="nextButton" (click)="nextPage()" class="btn btn-primary">Next</button> -->
   </div>
 </div>

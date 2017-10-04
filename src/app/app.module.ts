@@ -22,6 +22,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { FilterTypePipe } from './filter-type.pipe';
+import { ProductButtonsComponent } from './product-list/product-buttons/product-buttons.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -45,7 +46,8 @@ export const firebaseConfig = {
     ContactComponent,
     FilterDuplicatesPipe,
     LoginComponent,
-    FilterTypePipe
+    FilterTypePipe,
+    ProductButtonsComponent
   ],
   imports: [
     BrowserModule,
