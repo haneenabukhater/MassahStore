@@ -1,11 +1,23 @@
 <div class="flexParent">
 
-  <div *ngFor = "let product of products | filterDuplicates | filterType:category" class="flexChild" (click)="productWasClicked(product)" class="panel panel-default">
+  <div *ngFor = "let product of products
+                | filterDuplicates | filterType:category | slice:num1:num2; let i=index"
+                class="flexChild"
+                (click)="productWasClicked(product)"
+                class="panel panel-default"
+  >
     <img src={{product.Image_Src}} alt="" width="300px" height="400px">
     <div class="panel-footer">
       <h3 (click) = "goToDetailProduct">{{product.Title}}</h3>
       <h4>${{product.Variant_Price}}</h4>
     </div>
+    <button type="button" (click)="nextPage()" *ngIf="i >= 10">Next</button>
+
+  </div>
+
+  <div class="container nav-buttons">
+
+    <button *ngIf="backButton" (click)="backPage()" class="btn btn-primary">Back</button>
   </div>
 
 </div>

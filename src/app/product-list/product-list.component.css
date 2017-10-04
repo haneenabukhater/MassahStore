@@ -16,3 +16,8 @@
 .panel-footer {
   text-align: center;
 }
+
+.nav-buttons {
+  display: block;
+  margin: auto;
+}
