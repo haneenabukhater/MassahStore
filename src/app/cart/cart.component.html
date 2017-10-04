@@ -1,37 +1,11 @@
 <div class="flexParent">
-  <div class="flexChild panel panel-default">
-    <div class="panel-heading">JERSEY WHITE</div>
+  <div *ngFor="let item of objectsArray"  class="flexChild panel panel-default">
+    <div class="panel-heading">{{item.Title}}</div>
     <div class="panel-body">
-      <img src="http://via.placeholder.com/150x150">
-      <div class="itemInfo">
-        <h5>Color: <span class="itemDetails">White</span></h5>
-        <h5>Qty: <span class="itemDetails">1</span></h5>
-        <h5>Price: $ <span class="itemDetails">14</span></h5>
-        <button class="btn btn-info">Remove</button>
-      </div>
-    </div>
-  </div>
-  <div class="flexChild panel panel-default">
-    <div class="panel-heading">JERSEY WHITE</div>
-    <div class="panel-body">
-      <img src="http://via.placeholder.com/150x150">
-      <div class="itemInfo">
-        <h5>Color: <span class="itemDetails">White</span></h5>
-        <h5>Qty: <span class="itemDetails">1</span></h5>
-        <h5>Price: $ <span class="itemDetails">14</span></h5>
-        <button class="btn btn-info">Remove</button>
-      </div>
-    </div>
-  </div>
-  <div class="flexChild panel panel-default">
-    <div class="panel-heading">JERSEY WHITE</div>
-    <div class="panel-body">
-      <img src="http://via.placeholder.com/150x150">
-      <div class="itemInfo">
-        <h5>Color: <span class="itemDetails">White</span></h5>
-        <h5>Qty: <span class="itemDetails">1</span></h5>
-        <h5>Price: $ <span class="itemDetails">14</span></h5>
-        <button class="btn btn-info">Remove</button>
+<img src={{item.Image_Src}} alt="" width="150px" height="150px">      <div class="itemInfo">
+        <h5>Color: <span class="itemDetails"></span></h5>
+        <h5>Price: $ <span class="itemDetails">{{item.Variant_Price}}</span></h5>
+        <button class="btn btn-info" (click)="doIt()">Remove</button>
       </div>
     </div>
   </div>

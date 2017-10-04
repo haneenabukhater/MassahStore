@@ -15,12 +15,12 @@ export class AddToCartService {
 
 
   addItemToCart(itemId: string) {
-    
+
     if (! sessionStorage.getItem('myCart')) {
       sessionStorage.setItem('myCart', itemId);
     } else {
       let updatedCart = sessionStorage.getItem('myCart')
-                                      .concat(", " + itemId);
+                                      .concat("," + itemId);
       sessionStorage.setItem('myCart', updatedCart);
     }
 

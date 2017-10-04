@@ -32,6 +32,7 @@ export class ProductListComponent implements OnInit {
       this.category = parameters['category'];
     })
   }
+  
   productWasClicked(clickedProduct) {
     this.myRouter.navigate(['products/item', clickedProduct.$key]);
   }
