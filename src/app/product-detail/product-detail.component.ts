@@ -40,6 +40,10 @@ export class ProductDetailComponent implements OnInit {
   }
 
   checkMyCart() {
+    if (this.addToCartService.getCart() === null) {
+      alert('Your cart is currently empty.')
+    } else {
     alert( this.addToCartService.getCart() );
+    }
   }
 }

@@ -32,16 +32,23 @@
            </p> -->
          </div>
         </li>
-        <li class="nav-item">
+
+        <li class="nav navbar-nav navbar-right">
           <a routerLink="contact">Contact Us</a>
         </li>
-        <li class="nav-item" id="cart">
+        <!-- <li class="nav-item" id="cart">
           <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</a>
+        </li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="isLoggedIn">
+          <a>{{userName}}</a>
+          <a (click)="logout()"><span class="glyphicon glyphicon-user"></span>Log out</a>
         </li>
-        <button (click)="clearSession()">Empty Cart</button>
-        <li class="nav-item">
-          <a routerLink="login"><span class="glyphicon glyphicon-user"></span> Log In</a>  
+        <li *ngIf ="!isLoggedIn">
+          <a (click)="login()"><span class="glyphicon glyphicon-user"></span>Log in</a>
         </li>
       </ul>
+
   </div>
 </nav>

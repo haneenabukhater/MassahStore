@@ -5,10 +5,16 @@
   flex-wrap: wrap;
   -webkit-flex-direction: row;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+
 }
 .electricBoogaloo {
-  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
-  max-width: 30%;
-  flex-basis: 33%;
-  /*align-self: left;*/
+  flex: auto;
+}
+.showDetails {
+  border-color: white;
+  background-color: white;
+  border-radius: 40px;
+  border-width: 0px;
 }
