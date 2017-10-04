@@ -15,7 +15,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class ProductListComponent implements OnInit {
   category: string;
   products: any[];
-  // nextButton: boolean = true;
+  nextButton: boolean;
   backButton: boolean = false;
   num1: number = 0;
   num2: number = 11;
@@ -36,6 +36,13 @@ export class ProductListComponent implements OnInit {
   productWasClicked(clickedProduct) {
     this.myRouter.navigate(['products/item', clickedProduct.$key]);
   }
+  ngAfterContentInit() {
+    this.evaluateNextButton;
+  }
+  evaluateNextButton(fromChild) {
+    this.nextButton = fromChild;
+  }
+
   nextPage() {
     this.cycleProducts(12);
     this.backButton = true;

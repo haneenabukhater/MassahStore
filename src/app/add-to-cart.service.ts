@@ -3,17 +3,11 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class AddToCartService {
-
   myCart: FirebaseListObservable<any[]>;
 
   constructor(private cloudStorage: AngularFireDatabase) {
     this.myCart = cloudStorage.list('items')
   }
-
-
-
-
-
   addItemToCart(itemId: string) {
 
     if (! sessionStorage.getItem('myCart')) {
@@ -24,7 +18,6 @@ export class AddToCartService {
       sessionStorage.setItem('myCart', updatedCart);
     }
 
-    // alert('item: ' + itemId + " added to cart!");
   }
 
   findItemInCartById(itemId: string) {

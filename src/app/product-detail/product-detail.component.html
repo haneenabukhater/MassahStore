@@ -5,9 +5,14 @@
   </div>
   <div class="electricBoogaloo">
     <h3 >{{productToDisplay.Title}}</h3>
-    <button (click)="printBody($event)" name="button">Show Details</button>
+    <hr>
+    <button class="showDetails"(click)="printBody($event)" name="button">Show Details...</button>
+    <br>
     <p id="homies"></p>
+    <br>
     <h4>${{productToDisplay.Variant_Price}}.00</h4>
+    <br>
+    <br>
     <button type="button" (click)="addToCart()" >Add to cart</button>
     <button type="button" (click)="checkMyCart()">Check My Cart</button>
   </div>
