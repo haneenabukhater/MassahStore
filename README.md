@@ -13,9 +13,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Workflow
 
-Whiteboarding
+#### Trello Digital Stickies & Whiteboarding
 
-P
+Our process began with a roundtable discussion captured on the the Trello Board.  We talked components/models/pipes/services, user stories, admin stories, and of course, items to give over to Patrick Swayze (that's right, the Cooler).
+
+![Patrick Swayze, the Cooler](src/resources/imgs/swayze.jpg)
+
+###### Here's that board in action.
+
+![Trello, Stickies for People that Love Trees](src/resources/imgs/trello.png)
+
+We moved on to whiteboarding the layout of our components and pages, which in turn, set us on a path to understand our routing and foresee many of the chokepoints of our work.
+
+[whiteboard photo documentation](#whiteboard-photo-appendix)
+
 
 
 ***
@@ -62,3 +73,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 *{Determine the license under which this application can be used.  See below for more details on licensing.}*
 
 Copyright (c) 2017 **_Massah_**
+
+
+### Whiteboard Photo Appendix
+
+![Welcome to Massah Page](src/resources/imgs/welcome.jpg)
+
+![Our Collection Display](src/resources/imgs/collection.jpg)
+
+![Our Product Detail Design](src/resources/imgs/detail.jpg)
+
+![Our Account Page Layout](src/resources/imgs/account.jpg)
+
+![Evan takes a break](src/resources/imgs/evan.jpg)
+##### Evan demonstrates the Pomodoro Technique.
