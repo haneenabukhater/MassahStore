@@ -12,5 +12,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  clearSession() {
+    sessionStorage.clear();
+  }
 }

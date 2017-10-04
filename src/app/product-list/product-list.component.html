@@ -1,5 +1,4 @@
-<div class="flexParent" let homies='abc'>
-
+<div class="flexParent">
   <div *ngFor = "let product of products
                 | filterDuplicates | filterType:category | slice:num1:num2; let i=index"
                 class="flexChild"

@@ -28,14 +28,13 @@ export class ProductListComponent implements OnInit {
     this.productService.getProducts().subscribe( lastData => {
       this.products = lastData;
     });
-
     this.currentRoute.params.forEach( parameters => {
       this.category = parameters['category'];
     })
   }
 
   productWasClicked(clickedProduct) {
-    this.myRouter.navigate(['products/item', clickedProduct.Handle]);
+    this.myRouter.navigate(['products/item', clickedProduct.$key]);
   }
   checkIndex(stuff) {
     alert(stuff);

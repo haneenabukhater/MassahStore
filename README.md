@@ -6,10 +6,17 @@
 
 ## Description
 
-_The Massah webstore runs with a lot of help from Angular2 and a big assist from Firebase for secure data storage.  Users are able to seemlessly navigate our store and checkout with ease and peace of mind._
+_The Massah webstore runs with a lot of help from Angular2 and a big assist from Firebase for secure data storage.  Users are able to seemlessly navigate our store and checkout with ease and peace of mind.  They can connect with our fabulous social media pages, save items to their cart, and find links to sales, new collections, and interesting articles._
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
+## Workflow
+
+Whiteboarding
+
+P
+
 
 ***
 ## Setup
