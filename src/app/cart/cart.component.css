@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
-  margin-bottom: 70px;
+  margin-bottom: 200px;
   margin-top: 50px;
 }
 .itemInfo {
@@ -17,10 +17,9 @@
 }
 
 .childSummary {
-  padding-top: 20px;
   text-align: center;
   max-width: 600px;
-  margin-bottom: 250px;
+  /*margin-bottom: 250px;*/
 }
 
 .panel:hover {

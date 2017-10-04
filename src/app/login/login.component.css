@@ -1,11 +1,16 @@
-.container {
+#main {
+  display: block;
+  /*position: relative;*/
+}
+
+.parent {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
 }
 .child {
-margin-right: 100px;
+  margin-right: 100px;
 }
 
 h3 {

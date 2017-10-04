@@ -8,17 +8,14 @@ h1 {
   flex-wrap: wrap;
   -webkit-flex-direction: row;
   flex-direction: row;
-  padding-bottom: 250px;
+  margin-bottom: 200px;
 }
 .flexin {
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
   max-width: 30%;
   flex-basis: 33%;
-  /*align-self: left;*/
 }
 a {
-  /*margin-bottom: 8px;
-  margin-right: 8px;*/
   text-decoration: none;
   color: black;
 }

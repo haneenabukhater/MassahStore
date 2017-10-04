@@ -23,6 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { FilterTypePipe } from './filter-type.pipe';
+import { ProductButtonsComponent } from './product-list/product-buttons/product-buttons.component';
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
 
@@ -51,8 +52,7 @@ export const firebaseConfig = {
     FilterDuplicatesPipe,
     LoginComponent,
     FilterTypePipe,
-    PublicComponent,
-    PrivateComponent
+    ProductButtonsComponent
   ],
   imports: [
     BrowserModule,
