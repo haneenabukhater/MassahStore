@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseObjectObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Product } from '../product.model';
@@ -16,11 +17,13 @@ import { AddToCartService } from '../add-to-cart.service';
 export class ProductDetailComponent implements OnInit {
   productId: string;
   productToDisplay;
+  displayContinueShoppingMessage: boolean = false;
 
   constructor(private route: ActivatedRoute,
               private location: Location,
               private productService: ProductService,
-              private addToCartService: AddToCartService
+              private addToCartService: AddToCartService,
+              private myRouter: Router
 ) { }
 
   ngOnInit() {
@@ -32,18 +35,17 @@ export class ProductDetailComponent implements OnInit {
     });
   }
   addToCart() {
+    this.displayContinueShoppingMessage = true;
     this.addToCartService.addItemToCart(this.productId);
   }
 
   printBody() {
     document.getElementById('homies').innerHTML = this.productToDisplay.Body;
   }
-
-  checkMyCart() {
-    if (this.addToCartService.getCart() === null) {
-      alert('Your cart is currently empty.')
-    } else {
-    alert( this.addToCartService.getCart() );
-    }
+  continueShoppingWasClicked() {
+    window.history.back();
+  }
+  myCartButtonWasClicked() {
+    this.myRouter.navigate(['cart']);
   }
 }
