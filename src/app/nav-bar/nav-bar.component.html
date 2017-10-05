@@ -7,9 +7,6 @@
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="">Massah</a>
-        </li>
-        <li class="nav-item">
           <a routerLink="about">About</a>
         </li>
         <li ngbDropdown class="d-inline-block">
@@ -32,15 +29,15 @@
            </p> -->
          </div>
         </li>
-
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         <li class="nav navbar-nav navbar-right">
           <a routerLink="contact">Contact Us</a>
         </li>
         <li class="nav-item" id="cart">
-          <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span>My Cart</a>
+          <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</a>
         </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+
         <li *ngIf="isLoggedIn">
           <a>{{userName}}</a>
           <a (click)="logout()"><span class="glyphicon glyphicon-user"></span>Log out</a>

@@ -1,6 +1,9 @@
 .navbar {
-  border: 1px solid black;
+
 }
 a {
   color: black;
+}
+#dropdownBasic1 {
+  width: 120px;
 }
