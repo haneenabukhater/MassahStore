@@ -14,7 +14,7 @@ export class AddToCartService {
       sessionStorage.setItem('myCart', itemId);
     } else {
       let updatedCart = sessionStorage.getItem('myCart')
-                                      .concat(", " + itemId);
+                                      .concat("," + itemId);
       sessionStorage.setItem('myCart', updatedCart);
     }
 

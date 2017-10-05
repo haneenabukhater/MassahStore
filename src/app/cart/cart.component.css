@@ -2,8 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+<<<<<<< HEAD
+  flex-direction: column;
+  margin-bottom: 70px;
+=======
   flex-direction: row;
   margin-bottom: 200px;
+>>>>>>> develop
   margin-top: 50px;
 }
 .itemInfo {
@@ -32,5 +37,5 @@
    -moz-transition: all 200ms ease-in;
    -moz-transform: scale(1.5);
    transition: all 200ms ease-in;
-   transform: scale(1.2);
+   transform: scale(1.1);
 }
