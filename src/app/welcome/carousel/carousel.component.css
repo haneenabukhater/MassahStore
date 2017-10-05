@@ -1,19 +1,20 @@
 
 figure:nth-child(1) {
-   animation: xfade 48s 36s infinite;
+   animation: xfade 24s 18s infinite;
 }
 figure:nth-child(2) {
-   animation: xfade 48s 24s infinite;
+   animation: xfade 24s 12s infinite;
 }
 figure:nth-child(3) {
-   animation: xfade 48s 12s infinite;
+   animation: xfade 24s 6s infinite;
 }
 figure:nth-child(4) {
-   animation: xfade 48s 0s infinite;
+   animation: xfade 24s 0s infinite;
 }
 .css-slideshow{
+  align-content: center;
    position: relative;
-   max-width: 80%;
+   height: inherit;
    margin: 5em auto .5em auto;
 }
 .css-slideshow figure{
@@ -37,6 +38,10 @@ figure:nth-child(4) {
 .css-slideshow figure{
    opacity:0;
 }
+.slide {
+  position: relative;
+  height: 854px;
+}
 @keyframes xfade{
   0%{
     opacity: 1;
@@ -47,16 +52,14 @@ figure:nth-child(4) {
   25%{
     opacity: 0;
   }
-  48% {
-    opacity: 0
-  }
-  50% {
-    opacity: 1;
-  }
   98% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
+}
+img {
+  height: 100%;
+  width: 100%;
 }
