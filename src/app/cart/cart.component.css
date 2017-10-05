@@ -2,13 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-<<<<<<< HEAD
   flex-direction: column;
   margin-bottom: 70px;
-=======
   flex-direction: row;
   margin-bottom: 200px;
->>>>>>> develop
   margin-top: 50px;
 }
 .itemInfo {
