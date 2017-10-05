@@ -1,22 +1,45 @@
-<div class="flexParent">
+<div class="container" *ngIf="subTotal === null">
+  <h2>Sorry mate, nothing in your cart today</h2>
+</div>
+
+<div class="flexParent" >
   <div *ngFor="let item of objectsArray"  class="flexChild panel panel-default">
-    <div class="panel-heading">{{item.Title}}</div>
+    <div class="panel-heading">
+      <p>{{item.Title}}</p>
+    </div>
     <div class="panel-body">
-<img src={{item.Image_Src}} alt="" width="150px" height="150px">      <div class="itemInfo">
-        <h5>Color: <span class="itemDetails"></span></h5>
-        <h5>Price: $ <span class="itemDetails">{{item.Variant_Price}}</span></h5>
-        <button class="btn btn-info" (click)="doIt()">Remove</button>
+      <img src={{item.Image_Src}} alt="" width="150px" height="150px">
+      <div class="itemInfo">
+          <h5>Color: <span class="itemDetails"></span></h5>
+          <h5>Price: $ <span class="itemDetails">{{item.Variant_Price}}</span></h5>
+          <button class="btn btn-info" (click)="removeButtonWasClicked(item)">Remove</button>
       </div>
     </div>
   </div>
 </div>
+
+<!-- <div class="flexParent">
+  <div *ngFor="let item of myObservable | async"  class="flexChild panel panel-default">
+    <div class="panel-heading">
+      <p>{{item.Title}}</p>
+    </div>
+    <div class="panel-body">
+      <img src={{item.Image_Src}} alt="" width="150px" height="150px">
+      <div class="itemInfo">
+          <h5>Color: <span class="itemDetails"></span></h5>
+          <h5>Price: $ <span class="itemDetails">{{item.Variant_Price}}</span></h5>
+          <button class="btn btn-info" (click)="removeButtonWasClicked(item)">Remove</button>
+      </div>
+    </div>
+  </div>
+</div> -->
 
   <!-- Summary -->
 <div class="childSummary container panel panel-default">
     <div class="panel-heading">SUMMARY</div>
     <div class="panel-body summary">
       <h5>Delivery address: <br><span class="itemDetails">250 Del Medio Ave, apt. 307 <br>Mountain View, CA 97225</span></h5>
-      <h5>Total: $ <span class="itemDetails">28</span></h5>
+      <h1>Total: $ {{subTotal}}</h1>
     <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
     </div>
 </div>
