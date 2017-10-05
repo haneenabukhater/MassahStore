@@ -11,6 +11,7 @@ a {
 .dropdown-item {
   margin: 4px;
   max-width: 50px;
+  padding-left: 20px;
 }
 .navbar-right {
   margin-right: 12px;
