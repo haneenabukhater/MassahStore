@@ -2,9 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: 70px;
   margin-top: 50px;
+}
+.flexChild {
+  align-self: auto;
+  max-width:  50%;
 }
 .itemInfo {
   display: block;
