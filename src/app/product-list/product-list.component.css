@@ -20,5 +20,6 @@
   width: 100%;
   /*border: 1px solid black;*/
   display: block;
-  margin: auto;
+  padding-bottom: 75px;
+  margin-bottom: 25px;
 }
