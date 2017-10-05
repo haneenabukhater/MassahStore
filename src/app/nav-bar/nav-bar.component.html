@@ -35,15 +35,9 @@
           <a routerLink="contact">Contact Us</a>
         </li>
         <li class="nav-item" id="cart">
-<<<<<<< HEAD
           <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</a>
         </li>
-=======
-          <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span>My Cart</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
->>>>>>> develop
+
         <li *ngIf="isLoggedIn">
           <a>{{userName}}</a>
           <a (click)="logout()"><span class="glyphicon glyphicon-user"></span>Log out</a>
