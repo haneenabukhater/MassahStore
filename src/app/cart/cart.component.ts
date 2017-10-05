@@ -29,32 +29,28 @@ export class CartComponent implements OnInit {
 
 
   }
-  ngAfterContentInit() {
-    let homies = [1,2,3,4,5];
-    let source = Rx.Observable.from(homies);
-
-    let subs = source.subscribe(
-         e => console.log(e),
-         error => console.log(error),
-         () => console.log('were done here')
-       )
-    homies.push(6);
-  }
 
   loadCartFromSessionStorage() {
-    return this.addToCartService
-      .getCart()
-      .split(',')
-      .map(item => { this.productService
-      .getProductById(item)
-      .subscribe(
-        dataLastEmitted => {
-          this.objectsArray.push(dataLastEmitted)
-          this.getCumulativeSubTotal();
-        }
-    )}
-  )}
-
+    let asObject =  this.addToCartService.getCart().split(',').forEach(e=> {
+      // console.log('hey');
+      // console.log(e)
+      // console.log(JSON.parse(e))
+    } ) ;
+    // console.log(asObject);
+    // return this.addToCartService
+    //   .getCart()
+    //   .split(',')
+    //   .map(item => {
+    //     this.productService
+    //   .getProductById("2")
+    //   .subscribe(
+    //     dataLastEmitted => {
+    //       this.objectsArray.push(dataLastEmitted)
+    //       this.getCumulativeSubTotal();
+    //     }
+    // )}
+  // )}
+}
   getCumulativeSubTotal() {
     console.log('called cum total')
     this.subTotal = this.objectsArray.reduce(
@@ -64,7 +60,7 @@ export class CartComponent implements OnInit {
 }
 
 removeButtonWasClicked(clickedItem) {
-  this.addToCartService.removeItemFromCart(clickedItem.$key);
+  this.addToCartService.removeItemFromCart(clickedItem.$key, -2);
   window.location.reload();
 }
 

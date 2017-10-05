@@ -36,7 +36,7 @@ export class ProductDetailComponent implements OnInit {
   }
   addToCart() {
     this.displayContinueShoppingMessage = true;
-    this.addToCartService.addItemToCart(this.productId);
+    this.addToCartService.addItemToCart(this.productId, 2);
   }
 
   printBody() {
