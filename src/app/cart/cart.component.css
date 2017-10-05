@@ -33,3 +33,7 @@
    transition: all 200ms ease-in;
    transform: scale(1.1);
 }
+
+.qty {
+  padding-bottom:10px;
+}
