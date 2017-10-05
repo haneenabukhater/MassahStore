@@ -28,6 +28,7 @@ import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
 
 
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,

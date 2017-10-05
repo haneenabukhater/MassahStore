@@ -1,8 +1,7 @@
-<div class="container" *ngIf="subTotal === null">
-  <h2>Sorry mate, nothing in your cart today</h2>
-</div>
-
-<div class="flexParent" >
+<div class="flexParent">
+  <div class="flexChild" *ngIf="!objectsArray">
+    <h2>Sorry mate, nothing in your cart today</h2>
+  </div>
   <div *ngFor="let item of objectsArray"  class="flexChild panel panel-default">
     <div class="panel-heading">
       <p>{{item.Title}}</p>
