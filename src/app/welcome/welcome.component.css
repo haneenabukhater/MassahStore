@@ -15,7 +15,6 @@ h1 {
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
   max-width: 30%;
   flex-basis: 33%;
-  /*align-self: left;*/
 }
 a {
   text-decoration: none;

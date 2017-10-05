@@ -1,7 +1,14 @@
+
 #signature {
 size: 120%;
 }
 
 body {
   padding-bottom: 40px;
+}
+
+#containerMain {
+  margin-bottom: 100px;
+  position: relative;
+
 }

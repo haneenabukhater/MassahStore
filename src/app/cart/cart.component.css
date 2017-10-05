@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 70px;
   margin-top: 50px;
 }
@@ -17,10 +17,8 @@
 }
 
 .childSummary {
-  padding-top: 20px;
   text-align: center;
   max-width: 600px;
-  margin-bottom: 250px;
 }
 
 .panel:hover {
@@ -33,5 +31,5 @@
    -moz-transition: all 200ms ease-in;
    -moz-transform: scale(1.5);
    transition: all 200ms ease-in;
-   transform: scale(1.2);
+   transform: scale(1.1);
 }
