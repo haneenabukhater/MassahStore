@@ -9,11 +9,8 @@ h1 {
   flex-wrap: wrap;
   -webkit-flex-direction: row;
   flex-direction: row;
-<<<<<<< HEAD
   overflow: auto;
-=======
-  margin-bottom: 200px;
->>>>>>> develop
+
 }
 .flexin {
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
