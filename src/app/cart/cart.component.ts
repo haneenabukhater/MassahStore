@@ -31,6 +31,7 @@ export class CartComponent implements OnInit {
   }
 
   loadCartFromSessionStorage() {
+    console.log('loading cart')
     let asObject =  this.addToCartService.getCart().split(',').forEach(e=> {
       // console.log('hey');
       // console.log(e)
