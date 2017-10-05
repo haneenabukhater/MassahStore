@@ -2,7 +2,6 @@
  display: flex;
  flex-wrap: wrap;
  justify-content: space-evenly;
- margin-bottom: 201px;
 }
 .flexChild {
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
@@ -18,6 +17,8 @@
 }
 
 .nav-buttons {
+  width: 100%;
+  border: 1px solid black;
   display: block;
   margin: auto;
 }
