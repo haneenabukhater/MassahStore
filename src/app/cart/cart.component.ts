@@ -29,14 +29,17 @@ export class CartComponent implements OnInit {
 
 
   }
-  // ngAfterContentInit() {
-  //   let source = Rx.Observable.from(this.objectsArray)
-  //   let subs = source.subscribe(
-  //        e => alert('hey'),
-  //        error => console.log(error),
-  //        () => console.log('were done here')
-  //      )
-  // }
+  ngAfterContentInit() {
+    let homies = [1,2,3,4,5];
+    let source = Rx.Observable.from(homies);
+
+    let subs = source.subscribe(
+         e => console.log(e),
+         error => console.log(error),
+         () => console.log('were done here')
+       )
+    homies.push(6);
+  }
 
   loadCartFromSessionStorage() {
     return this.addToCartService
@@ -53,15 +56,15 @@ export class CartComponent implements OnInit {
   )}
 
   getCumulativeSubTotal() {
-    console.log('made it this far')
+    console.log('called cum total')
     this.subTotal = this.objectsArray.reduce(
                           function(accumulator, current){
                           return accumulator + current.Variant_Price
                               }, 0);
 }
 
-removeButtonWasClicked(payload) {
-  this.addToCartService.removeItemFromCart(payload.$key);
+removeButtonWasClicked(clickedItem) {
+  this.addToCartService.removeItemFromCart(clickedItem.$key);
   window.location.reload();
 }
 
