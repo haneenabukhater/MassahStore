@@ -42,7 +42,6 @@ export class ProductListComponent implements OnInit {
   evaluateNextButton(fromChild) {
     this.nextButton = fromChild;
   }
-
   nextPage() {
     this.cycleProducts(12);
     this.backButton = true;
