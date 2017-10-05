@@ -13,8 +13,7 @@ figure:nth-child(4) {
 }
 .css-slideshow{
    position: relative;
-   max-width: 495px;
-   height: 370px;
+   max-width: 80%;
    margin: 5em auto .5em auto;
 }
 .css-slideshow figure{
