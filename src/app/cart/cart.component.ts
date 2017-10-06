@@ -31,7 +31,6 @@ export class CartComponent implements OnInit {
   }
 
   loadCartFromSessionStorage() {
-    // console.log('loading cart')
     let cart =  JSON.parse( this.addToCartService.getCart() );
     cart.forEach( e => {
       this.productService.getProductById(e.itemId)
@@ -49,8 +48,9 @@ export class CartComponent implements OnInit {
                               }, 0);
 }
 
-removeButtonWasClicked(clickedItem) {
-  this.addToCartService.removeItemFromCart(clickedItem.$key, -2);
+updateButtonWasClicked(clickedItem, newQuantity) {
+  let difference = clickedItem.quantityInCart - Number(newQuantity);
+  this.addToCartService.removeItemFromCart(clickedItem.$key, -difference);
   window.location.reload();
 }
 
