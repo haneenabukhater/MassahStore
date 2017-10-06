@@ -29,42 +29,28 @@ export class CartComponent implements OnInit {
 
 
   }
-  ngAfterContentInit() {
-    let homies = [1,2,3,4,5];
-    let source = Rx.Observable.from(homies);
-
-    let subs = source.subscribe(
-         e => console.log(e),
-         error => console.log(error),
-         () => console.log('were done here')
-       )
-    homies.push(6);
-  }
 
   loadCartFromSessionStorage() {
-    return this.addToCartService
-      .getCart()
-      .split(',')
-      .map(item => { this.productService
-      .getProductById(item)
-      .subscribe(
-        dataLastEmitted => {
-          this.objectsArray.push(dataLastEmitted)
-          this.getCumulativeSubTotal();
-        }
-    )}
-  )}
-
+    let cart =  JSON.parse( this.addToCartService.getCart() );
+    cart.forEach( e => {
+      this.productService.getProductById(e.itemId)
+                         .subscribe( item => {
+                           item.quantityInCart = e.quantity;
+                           this.objectsArray.push(item);
+                           this.getCumulativeSubTotal();
+                         })
+    })
+}
   getCumulativeSubTotal() {
-    console.log('called cum total')
     this.subTotal = this.objectsArray.reduce(
                           function(accumulator, current){
-                          return accumulator + current.Variant_Price
+                          return accumulator + (current.Variant_Price * current.quantityInCart)
                               }, 0);
 }
 
-removeButtonWasClicked(clickedItem) {
-  this.addToCartService.removeItemFromCart(clickedItem.$key);
+updateButtonWasClicked(clickedItem, newQuantity) {
+  let difference = clickedItem.quantityInCart - Number(newQuantity);
+  this.addToCartService.removeItemFromCart(clickedItem.$key, -difference);
   window.location.reload();
 }
 

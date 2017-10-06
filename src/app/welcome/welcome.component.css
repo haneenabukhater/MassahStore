@@ -62,6 +62,7 @@ img {
   background: #ccc;
   transition: transform .2s ease-in-out;
 }
-.shop-now {
-  text-align: center;
+.centerIt {
+  display: relative;
+  margin: auto;
 }

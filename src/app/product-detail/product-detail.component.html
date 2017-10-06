@@ -9,7 +9,11 @@
         <button class="showDetails"(click)="printBody($event)" name="button">Show Details...</button>
         <p id="homies"></p>
         <h4>${{productToDisplay.Variant_Price}}.00</h4>
-        <button type="button" (click)="addToCart()"
+        <div class="qty">
+          <label>Qty</label>
+          <input #quantity id="quantity" type="number" value="1" min="1">
+        </div>
+        <button (click)="addToCart(quantity.value)"
         class="btn btn-warning" >Add to cart</button>
         <button type="button" class="btn btn-info" (click)="continueShoppingWasClicked()">Continue Shopping</button>
       </div>

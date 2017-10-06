@@ -15,6 +15,7 @@ import { AddToCartService } from '../add-to-cart.service';
   providers: [ ProductService, AddToCartService ]
 })
 export class ProductDetailComponent implements OnInit {
+  public numberOfItems;
   productId: string;
   productToDisplay;
   displayContinueShoppingMessage: boolean = false;
@@ -34,9 +35,9 @@ export class ProductDetailComponent implements OnInit {
       this.productToDisplay = dataEmitted;
     });
   }
-  addToCart() {
+  addToCart(q: string) {
     this.displayContinueShoppingMessage = true;
-    this.addToCartService.addItemToCart(this.productId);
+    this.addToCartService.addItemToCart(this.productId, Number(q));
   }
 
   printBody() {
