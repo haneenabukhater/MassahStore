@@ -10,16 +10,13 @@ export class AddToCartService {
   }
   addItemToCart(itemIdPassedIn: string, quantityPassedIn: number) {
     // console.log(itemIdPassedIn, quantityPassedIn);
-    let addIt =
+    let addIt = [
       {
         itemId: itemIdPassedIn,
         quantity: quantityPassedIn
-      };
+      }
+    ];
     let stringy = JSON.stringify(addIt);
-
-    console.log(addIt);
-    console.log(stringy);
-    console.log(JSON.parse(stringy))
     if (! sessionStorage.getItem('myCart')) {
       sessionStorage.setItem('myCart', stringy);
     } else {
@@ -35,32 +32,24 @@ export class AddToCartService {
 
 
   updatedCart(csvString: string, itemIdPassedIn: string, quantityPassedIn: number) {
-    let newCSV: string;
-    let arr = csvString.split(',');
-    console.log(arr)
-    let arrObj=[];
+    let cartAsJSON = JSON.parse(csvString);
+    let found: boolean;
 
-    arr.forEach(function(e){
-      arrObj.push(JSON.parse(e));
-    });
-
-    let found: boolean = false;
-
-    arrObj.forEach(function(element){
-      if(element.itemId === itemIdPassedIn) {
-        !found;
-        return element.quantity += quantityPassedIn;
+    cartAsJSON.forEach( e => {
+      if (e.itemId === itemIdPassedIn) {
+        found = true;
+        return e.quantity += quantityPassedIn;
       }
     });
 
-
-    if (!found) arrObj.push(
+    if (!found) {
+      cartAsJSON.push(
       {
         itemId: itemIdPassedIn,
         quantity: quantityPassedIn
-      });
-    newCSV = JSON.stringify(arrObj);
-    return newCSV;
+      })
+    }
+    return JSON.stringify(cartAsJSON);
   }
 
   findItemInCartById(itemId: string) {

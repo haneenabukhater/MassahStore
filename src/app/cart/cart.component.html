@@ -10,8 +10,10 @@
       <img src={{item.Image_Src}} alt="" width="150px" height="150px">
       <div class="itemInfo">
           <h5>Color: <span class="itemDetails"></span></h5>
+          <h5>Quantity: {{item.quantityInCart}}</h5>
           <h5>Price: $ <span class="itemDetails">{{item.Variant_Price}}</span></h5>
-          <button class="btn btn-info" (click)="removeButtonWasClicked(item)">Remove</button>
+          <h5>subTotal: $ {{item.quantityInCart * item.Variant_Price}}</h5>
+          <button class="btn btn-info" (click)="removeButtonWasClicked(item)">Update</button>
       </div>
     </div>
   </div>

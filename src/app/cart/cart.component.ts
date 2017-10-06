@@ -31,32 +31,21 @@ export class CartComponent implements OnInit {
   }
 
   loadCartFromSessionStorage() {
-    console.log('loading cart')
-    let asObject =  this.addToCartService.getCart().split(',').forEach(e=> {
-      // console.log('hey');
-      // console.log(e)
-      // console.log(JSON.parse(e))
-    } ) ;
-    // console.log(asObject);
-    // return this.addToCartService
-    //   .getCart()
-    //   .split(',')
-    //   .map(item => {
-    //     this.productService
-    //   .getProductById("2")
-    //   .subscribe(
-    //     dataLastEmitted => {
-    //       this.objectsArray.push(dataLastEmitted)
-    //       this.getCumulativeSubTotal();
-    //     }
-    // )}
-  // )}
+    // console.log('loading cart')
+    let cart =  JSON.parse( this.addToCartService.getCart() );
+    cart.forEach( e => {
+      this.productService.getProductById(e.itemId)
+                         .subscribe( item => {
+                           item.quantityInCart = e.quantity;
+                           this.objectsArray.push(item);
+                           this.getCumulativeSubTotal();
+                         })
+    })
 }
   getCumulativeSubTotal() {
-    console.log('called cum total')
     this.subTotal = this.objectsArray.reduce(
                           function(accumulator, current){
-                          return accumulator + current.Variant_Price
+                          return accumulator + (current.Variant_Price * current.quantityInCart)
                               }, 0);
 }
 
