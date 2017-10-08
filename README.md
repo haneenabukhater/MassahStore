@@ -8,8 +8,25 @@
 
 _The Massah webstore runs with a lot of help from Angular2 and a big assist from Firebase for secure data storage.  Users are able to seemlessly navigate our store and checkout with ease and peace of mind.  They can connect with our fabulous social media pages, save items to their cart, and find links to sales, new collections, and interesting articles._
 
+#### Here are a few images from our beautiful site.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Our Welcome Page is very interactive.  The large image is part of a carousel slideshow and almost everything else is an active link to other parts of the site, social media, or articles that may be of interest to our customers.
+
+![A screenshot of our welcome page](src/resources/imgs/screenWel.png)
+
+Our About Page shares our vision.
+
+![Another screenshot of our About Page](src/resources/imgs/screenAbout.png)
+
+Here is a shot of our scarf collection, our number one draw.
+
+![A view of our collection](src/resources/imgs/screenCol.png)
+
+We provide secure authentication for our customers through Google Sign in.
+
+![Secure Sign in with Google](src/resources/imgs/screenSign.png)
+
+ This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Workflow
 
@@ -56,7 +73,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_We strive for responsive functionality, however, this release accompanied an update to AngularFire that has caused a few hiccups.  It shouldn't keep you from enjoying the beautiful style and functionality. If you have any questions, [please contact us ](mailto:contact-us@massahcollection.com)._
 
 ## Build
 
@@ -64,13 +81,13 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_If you have any questions, [please contact us ](mailto:contact-us@massahcollection.com)._
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*MIT License. All Rights Reserved.*
 
 Copyright (c) 2017 **_Massah_**
 

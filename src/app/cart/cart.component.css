@@ -6,6 +6,10 @@
   margin-bottom: 70px;
   margin-top: 50px;
 }
+.flexChild {
+  align-self: auto;
+  /*max-width:  50%;*/
+}
 .itemInfo {
   display: block;
   float: right;
@@ -21,7 +25,7 @@
   max-width: 600px;
 }
 
-.panel:hover {
+/*.panel:hover {
    background-color: #cabece;
    z-index: 1.1;
    -webkit-transition: all 200ms ease-in;
@@ -32,4 +36,17 @@
    -moz-transform: scale(1.5);
    transition: all 200ms ease-in;
    transform: scale(1.1);
+}*/
+h2  {
+  text-align: center;
+  font-family: fantasy;
+}
+.panel-heading {
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.childSummary  {
+  padding-bottom: 100px;
+  margin-bottom: 100px;
 }

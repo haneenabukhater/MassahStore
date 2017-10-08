@@ -1,9 +1,18 @@
-.navbar {
-
+img {
+  margin-left: 12px;
 }
 a {
   color: black;
 }
 #dropdownBasic1 {
   width: 120px;
+}
+
+.dropdown-item {
+  margin: 4px;
+  max-width: 50px;
+  padding-left: 20px;
+}
+.navbar-right {
+  margin-right: 12px;
 }
