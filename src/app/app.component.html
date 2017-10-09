@@ -1,11 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<div id="containerMain">
+  <a routerLink="">
+    <img id="signature" src="src/resources/imgs/massah_signature.png" alt="Our Signature">
+  </a>
+  <hr>
+  <app-nav-bar></app-nav-bar>
+  <hr>
 
-<app-nav-bar></app-nav-bar>
+<router-outlet>    </router-outlet>
 
 
-<app-welcome></app-welcome>
-
-
+</div>
 <app-footer></app-footer>

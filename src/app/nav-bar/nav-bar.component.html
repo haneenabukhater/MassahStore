@@ -1,3 +1,51 @@
-<p>
-  nav-bar works!
-</p>
+<nav class="navbar navbar-light bg-faded">
+  <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a routerLink="">
+            <img src="/FBLogo.png" width="30" height="30" class="d-inline-block" alt="">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="about">About</a>
+        </li>
+        <li ngbDropdown class="d-inline-block">
+          <a class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Collections</a>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+           <p>
+             <a class="dropdown-item" routerLink="products/all">All</a>
+           </p>
+           <p>
+             <a class="dropdown-item" routerLink="products/scarf">Scarfs</a>
+           </p>
+           <p>
+             <a class="dropdown-item" routerLink="products/accessories">Accessories</a>
+           </p>
+           <!-- <p>
+             <a class="dropdown-item" routerLink="products/new">New Releases</a>
+           </p> -->
+           <!-- <p>
+             <a class="dropdown-item" routerLink="products/sale">On Sale!</a>
+           </p> -->
+         </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav navbar-nav navbar-right">
+          <a routerLink="contact">Contact Us</a>
+        </li>
+        <li class="nav-item" id="cart">
+          <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</a>
+        </li>
+
+        <li *ngIf="isLoggedIn">
+          <a>{{userName}}</a>
+          <a (click)="logout()"><span class="glyphicon glyphicon-user"></span>Log out</a>
+        </li>
+        <li *ngIf ="!isLoggedIn">
+          <a (click)="login()"><span class="glyphicon glyphicon-user"></span>Log in</a>
+        </li>
+      </ul>
+
+  </div>
+</nav>

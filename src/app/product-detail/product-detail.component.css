@@ -1,0 +1,25 @@
+.flexinTwo {
+  font-family: sans-serif;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+.electricBoogaloo {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+  text-align: center;
+}
+.showDetails {
+  border-color: white;
+  background-color: white;
+  border-radius: 40px;
+  border-width: 0px;
+}
+
+#displayMessage {
+  text-align: center;
+}

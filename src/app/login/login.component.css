@@ -1,0 +1,28 @@
+#main {
+  display: block;
+  /*position: relative;*/
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.child {
+  margin-right: 100px;
+}
+
+h3 {
+  padding: 15px;
+}
+input {
+  margin-top: 20px;
+  height: 30px;
+  width: 260px;
+  border: solid purple 2px;
+}
+
+.userLogin {
+  margin-top: 20px;
+}
