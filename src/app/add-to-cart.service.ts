@@ -8,47 +8,28 @@ export class AddToCartService {
   constructor(private cloudStorage: AngularFireDatabase) {
     this.myCart = cloudStorage.list('items')
   }
-  addItemToCart(itemIdPassedIn: string, quantityPassedIn: number) {
-    // console.log(itemIdPassedIn, quantityPassedIn);
-    let addIt = [
-      {
-        itemId: itemIdPassedIn,
-        quantity: quantityPassedIn
-      }
-    ];
-    let stringy = JSON.stringify(addIt);
-    if (! sessionStorage.getItem('myCart')) {
+  addItemToCart(itemId: string, quantity: number) {
+    let addIt = [ { itemId, quantity } ];
+    let currentCart = this.getCart();
+    let stringy = JSON.stringify( addIt);
+    if (!currentCart)
       sessionStorage.setItem('myCart', stringy);
-    } else {
-      let updatedCart =
-          this.updatedCart(
-            sessionStorage.getItem('myCart'),
-            itemIdPassedIn,
-            quantityPassedIn);
-
-      sessionStorage.setItem('myCart', updatedCart);
-    }
+    else
+      sessionStorage.setItem('myCart', this.updatedCart(currentCart, addIt[0]));
   }
 
-
-  updatedCart(csvString: string, itemIdPassedIn: string, quantityPassedIn: number) {
+  updatedCart(csvString: string, itemToUpdate: any) {
     let cartAsJSON = JSON.parse(csvString);
     let found: boolean;
 
     cartAsJSON.forEach( e => {
-      if (e.itemId === itemIdPassedIn) {
+      if (e.itemId === itemToUpdate.itemId) {
         found = true;
-        return e.quantity += quantityPassedIn;
+        return e.quantity += itemToUpdate.quantity;
       }
     });
 
-    if (!found) {
-      cartAsJSON.push(
-      {
-        itemId: itemIdPassedIn,
-        quantity: quantityPassedIn
-      })
-    }
+    if (!found) cartAsJSON.push(itemToUpdate)
     return JSON.stringify(cartAsJSON);
   }
 
@@ -56,11 +37,9 @@ export class AddToCartService {
     return this.cloudStorage.object(itemId);
   }
 
-  removeItemFromCart(itemIdPassedIn: string, quantityPassedIn: number) {
-    let updatedCart = this.updatedCart(
-                          sessionStorage.getItem('myCart'), itemIdPassedIn,
-                          quantityPassedIn);
-
+   removeItemFromCart(itemId: string, quantity: number) {
+    let asObject = { itemId, quantity };
+    let updatedCart = this.updatedCart( this.getCart(), asObject );
     if(!updatedCart) return sessionStorage.clear();
     sessionStorage.setItem('myCart', updatedCart);
   }
