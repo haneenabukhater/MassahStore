@@ -26,6 +26,8 @@ import { FilterTypePipe } from './filter-type.pipe';
 import { ProductButtonsComponent } from './product-list/product-buttons/product-buttons.component';
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
+import { CleanupDataComponent } from './cleanup-data/cleanup-data.component';
+import { ProductService } from './product.service';
 
 
 
@@ -53,7 +55,8 @@ export const firebaseConfig = {
     FilterDuplicatesPipe,
     LoginComponent,
     FilterTypePipe,
-    ProductButtonsComponent
+    ProductButtonsComponent,
+    CleanupDataComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [ ProductService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

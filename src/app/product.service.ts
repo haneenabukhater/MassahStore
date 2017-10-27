@@ -7,12 +7,16 @@ export class ProductService {
   products: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.products = database.list('products');
+  
   }
   getProducts(){
-    return this.products;
+    return this.database.list('products');
   }
   getProductById(productId: string) {
    return this.database.object('products/' + productId);
  }
+ removeProduct() {
+  //  this.database.object()
+ }
+
 }
