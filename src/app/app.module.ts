@@ -18,7 +18,6 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductListComponent } from './product-list/product-list.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
-import { FilterDuplicatesPipe } from './filter-duplicates.pipe';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
@@ -26,6 +25,8 @@ import { FilterTypePipe } from './filter-type.pipe';
 import { ProductButtonsComponent } from './product-list/product-buttons/product-buttons.component';
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
+import { CleanupDataComponent } from './cleanup-data/cleanup-data.component';
+import { ProductService } from './product.service';
 
 
 
@@ -50,10 +51,10 @@ export const firebaseConfig = {
     CartComponent,
     AboutComponent,
     ContactComponent,
-    FilterDuplicatesPipe,
     LoginComponent,
     FilterTypePipe,
-    ProductButtonsComponent
+    ProductButtonsComponent,
+    CleanupDataComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +66,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ ProductService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

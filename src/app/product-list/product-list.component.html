@@ -6,7 +6,7 @@
 
 <div class="flexParent">
   <div *ngFor = "let product of products
-                | filterDuplicates | filterType:category | slice:num1:num2; let i=index"
+                | filterType:category | slice:num1:num2; let i=index"
                 class="flexChild"
                 (click)="productWasClicked(product)"
                 class="panel panel-default"
