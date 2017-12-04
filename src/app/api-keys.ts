@@ -3,6 +3,6 @@ export var masterFirebaseConfig = {
   authDomain: "massahcollection.firebaseapp.com",
   databaseURL: "https://massahcollection.firebaseio.com",
   projectId: "massahcollection",
-  storageBucket: "",
+  storageBucket: "massahcollection.appspot.com",
   messagingSenderId: "36370559819"
 };
