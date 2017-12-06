@@ -16,3 +16,6 @@ a {
 .navbar-right {
   margin-right: 12px;
 }
+nav {
+  border: 1px solid black;
+}
