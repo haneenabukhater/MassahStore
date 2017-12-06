@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ROUTING } from './app.routing';
-import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule} from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import * as firebase from 'firebase';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -27,15 +27,13 @@ import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
 import { CleanupDataComponent } from './cleanup-data/cleanup-data.component';
 import { ProductService } from './product.service';
+import { StorageService } from './storage.service';
+import { firebaseConfig } from '../environments/environment';
 
+firebase.initializeApp(firebaseConfig);
 
-
-export const firebaseConfig = {
-  apiKey: masterFirebaseConfig.apiKey,
-  authDomain: masterFirebaseConfig.authDomain,
-  databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket,
-  messagingSenderId: masterFirebaseConfig.messagingSenderId
+export const db = {
+  firebase: firebase
 };
 
 @NgModule({
@@ -63,10 +61,11 @@ export const firebaseConfig = {
     HttpModule,
     ROUTING,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [ ProductService ],
+  providers: [ ProductService, StorageService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

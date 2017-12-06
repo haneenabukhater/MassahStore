@@ -6,9 +6,8 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class ProductService {
   products: FirebaseListObservable<any[]>;
 
-  constructor(private database: AngularFireDatabase) {
+  constructor(private database: AngularFireDatabase) { }
   
-  }
   getProducts(){
     return this.database.list('products');
   }

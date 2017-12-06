@@ -1,0 +1,48 @@
+[debug] [2017-12-05T00:38:06.126Z] ----------------------------------------------------------------------
+[debug] [2017-12-05T00:38:06.128Z] Command:       /home/evanrjohnso/.nvm/versions/node/v8.4.0/bin/node /home/evanrjohnso/.nvm/versions/node/v8.4.0/bin/firebase serve
+[debug] [2017-12-05T00:38:06.128Z] CLI Version:   3.16.0
+[debug] [2017-12-05T00:38:06.128Z] Platform:      linux
+[debug] [2017-12-05T00:38:06.128Z] Node Version:  v8.4.0
+[debug] [2017-12-05T00:38:06.129Z] Time:          Mon Dec 04 2017 16:38:06 GMT-0800 (PST)
+[debug] [2017-12-05T00:38:06.129Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-05T00:38:06.138Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-05T00:38:06.138Z] > authorizing via signed-in user
+[debug] [2017-12-05T00:38:06.139Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-12-05T00:38:06.139Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/FnicYaf2m0YbQEfuWMdmnkgUqzAaUfrTS9wpnnNuZcI',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Dec 04 2017 16:38:06 GMT-0800 (PST)
+[debug] [2017-12-05T00:38:06.891Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-05T00:38:06.900Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/massahcollection  
+  
+ Mon Dec 04 2017 16:38:06 GMT-0800 (PST)
+[debug] [2017-12-05T00:38:07.588Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-05T00:38:07.589Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/massahcollection/tokens  
+  
+ Mon Dec 04 2017 16:38:07 GMT-0800 (PST)
+[debug] [2017-12-05T00:38:08.102Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/evanrjohnso/Desktop/Epicodus/Angular2/MassahStore'...
+[info] 
+[debug] [2017-12-05T00:38:08.104Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/massahcollection  
+  
+ Mon Dec 04 2017 16:38:08 GMT-0800 (PST)
+[debug] [2017-12-05T00:38:08.612Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-05T00:38:08.612Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/36370559819/clients/_:getWebAppConfig  
+  
+ Mon Dec 04 2017 16:38:08 GMT-0800 (PST)
+[debug] [2017-12-05T00:38:09.054Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-05T00:38:09.074Z] TypeError: Cannot read property 'public' of undefined
+    at Server.<anonymous> (/home/evanrjohnso/.nvm/versions/node/v8.4.0/lib/node_modules/firebase-tools/lib/serve/hosting.js:34:17)
+    at Object.onceWrapper (events.js:314:30)
+    at emitNone (events.js:105:13)
+    at Server.emit (events.js:207:7)
+    at emitListeningNT (net.js:1349:10)
+    at _combinedTickCallback (internal/process/next_tick.js:135:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[error] 
+[error] Error: An unexpected error has occurred.
