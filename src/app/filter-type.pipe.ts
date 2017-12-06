@@ -8,9 +8,10 @@ import { ProductService } from './product.service';
 export class FilterTypePipe implements PipeTransform {
 
   transform(input: any, category: string): any {
-    if (category==='all') return input;
-    return input.filter( e => {
-      return e.Tags.includes(category);
+    if (category === 'all') return input;
+
+    return input.filter( product => {
+      return product.Tags==undefined || product.Tags.includes(category);
     })
   }
 

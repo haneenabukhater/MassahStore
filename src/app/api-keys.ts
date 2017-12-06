@@ -1,8 +1,8 @@
-export var masterFirebaseConfig = {
+export const masterFirebaseConfig = {
   apiKey: "AIzaSyAFc33ZQtgRSSHT3cfSAA4FDM5I4KWCCzI",
   authDomain: "massahcollection.firebaseapp.com",
   databaseURL: "https://massahcollection.firebaseio.com",
   projectId: "massahcollection",
-  storageBucket: "",
+  storageBucket: "massahcollection.appspot.com",
   messagingSenderId: "36370559819"
 };

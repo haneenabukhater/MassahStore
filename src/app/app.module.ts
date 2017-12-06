@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ROUTING } from './app.routing';
-import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule} from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import * as firebase from 'firebase';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -18,23 +18,21 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductListComponent } from './product-list/product-list.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
-import { FilterDuplicatesPipe } from './filter-duplicates.pipe';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { FilterTypePipe } from './filter-type.pipe';
 import { ProductButtonsComponent } from './product-list/product-buttons/product-buttons.component';
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
+import { CleanupDataComponent } from './cleanup-data/cleanup-data.component';
+import { ProductService } from './product.service';
+import { StorageService } from './storage.service';
+import { firebaseConfig } from '../environments/environment';
+import { MainIconComponent } from './main-icon/main-icon.component';
 
+firebase.initializeApp(firebaseConfig);
 
-
-export const firebaseConfig = {
-  apiKey: masterFirebaseConfig.apiKey,
-  authDomain: masterFirebaseConfig.authDomain,
-  databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket,
-  messagingSenderId: masterFirebaseConfig.messagingSenderId
+export const db = {
+  firebase: firebase
 };
 
 @NgModule({
@@ -50,10 +48,11 @@ export const firebaseConfig = {
     CartComponent,
     AboutComponent,
     ContactComponent,
-    FilterDuplicatesPipe,
     LoginComponent,
     FilterTypePipe,
-    ProductButtonsComponent
+    ProductButtonsComponent,
+    CleanupDataComponent,
+    MainIconComponent
   ],
   imports: [
     BrowserModule,
@@ -62,10 +61,11 @@ export const firebaseConfig = {
     HttpModule,
     ROUTING,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ ProductService, StorageService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
