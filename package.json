@@ -26,6 +26,7 @@
     "emailjs": "^1.0.12",
     "factory": "^1.0.3",
     "firebase": "^3.9.0",
+    "firebase-admin": "^5.5.1",
     "minimatch": "^3.0.4",
     "ng": "0.0.0-rc6",
     "promise-polyfill": "6.0.2",

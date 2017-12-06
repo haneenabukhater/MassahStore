@@ -9,8 +9,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css'],
-  providers: [ ProductService ]
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
   category: string;
@@ -32,7 +31,7 @@ export class ProductListComponent implements OnInit {
       this.category = parameters['category'];
     })
   }
-  
+
   productWasClicked(clickedProduct) {
     this.myRouter.navigate(['products/item', clickedProduct.$key]);
   }

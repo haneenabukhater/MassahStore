@@ -16,6 +16,7 @@ export class AuthenticationService {
     this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
   }
 
+
   logout() {
     this.afAuth.auth.signOut();
   }

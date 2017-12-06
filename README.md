@@ -1,4 +1,4 @@
-# Massah Store
+bran# Massah Store
 
 #### _Massah sells the finest scarves and apparel through our online portal. We source the most beautiful designs in the world, 10.2.17_
 
@@ -63,17 +63,15 @@ ng serve
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## To Do List
 
-## Known Bugs
+1. When browsing scarves on any page but the first, a navigation to the accessories page breaks.
+2. Sizing and spacing of all images
+3. Shop now button in welcome component
+4. Links to images coming from an async call, need to cache for future
+5. Cart total is stored in session
 
-_We strive for responsive functionality, however, this release accompanied an update to AngularFire that has caused a few hiccups.  It shouldn't keep you from enjoying the beautiful style and functionality. If you have any questions, [please contact us ](mailto:contact-us@massahcollection.com)._
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Support and contact details
 
@@ -84,5 +82,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### License
 
 *MIT License. All Rights Reserved.*
+
+Copyright (c) 2017 **_Massah_**
+
+
+### Whiteboard Photo Appendix
+
+![Welcome to Massah Page](src/resources/imgs/welcome.jpg)
+
+![Our Collection Display](src/resources/imgs/collection.jpg)
+
+![Our Product Detail Design](src/resources/imgs/detail.jpg)
+
+![Our Account Page Layout](src/resources/imgs/account.jpg)
 
 Copyright (c) 2017 **_Massah Collection_**

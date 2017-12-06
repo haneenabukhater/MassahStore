@@ -20,4 +20,9 @@ p{
   height: 50px;
   padding-bottom: 2%;
 }
+
+img {
+  width: 600px;
+  height: 400px;
+}
 @media only screen and (max-width: 749px){p{font-size:0.9375em}}

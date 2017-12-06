@@ -5,7 +5,8 @@ h2{
 .container{
   text-align: center;
   width: 700px;
-  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+  padding-bottom: 25px;
 }
 
 #signature{
