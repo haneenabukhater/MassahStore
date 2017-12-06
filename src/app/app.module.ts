@@ -23,12 +23,11 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { FilterTypePipe } from './filter-type.pipe';
 import { ProductButtonsComponent } from './product-list/product-buttons/product-buttons.component';
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
 import { CleanupDataComponent } from './cleanup-data/cleanup-data.component';
 import { ProductService } from './product.service';
 import { StorageService } from './storage.service';
 import { firebaseConfig } from '../environments/environment';
+import { MainIconComponent } from './main-icon/main-icon.component';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -52,7 +51,8 @@ export const db = {
     LoginComponent,
     FilterTypePipe,
     ProductButtonsComponent,
-    CleanupDataComponent
+    CleanupDataComponent,
+    MainIconComponent
   ],
   imports: [
     BrowserModule,
