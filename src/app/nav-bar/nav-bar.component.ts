@@ -11,8 +11,8 @@ import { AppComponent } from '../app.component';
 })
 export class NavBarComponent implements OnInit {
   user;
-  private isLoggedIn: Boolean;
-  private userName: String;
+  public isLoggedIn: Boolean;
+  public userName: String;
 
   constructor(public authService: AuthenticationService) {
     this.authService.user.subscribe(user =>  {

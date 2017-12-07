@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { StorageService } from '../storage.service';
 
 @Component({
@@ -6,19 +6,19 @@ import { StorageService } from '../storage.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements DoCheck {
   url: string;
 
   constructor(private storageService: StorageService) {}
 
-  ngOnInit() {
+  ngDoCheck() {
     this.storageService
-      .getPicture('about.jpg')
-      .then(picURL => {
-        this.url = picURL;
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    .getPicture('about.jpg')
+    .then(picURL => {
+      this.url = picURL;
+    })
+    .catch(error => {
+      console.log(error);
+    });
   }
 }

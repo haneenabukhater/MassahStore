@@ -11,5 +11,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
+  createAccount() {
+    alert('feature to be implemented')
+  }
 
 }
