@@ -28,7 +28,7 @@ import { ProductService } from './product.service';
 import { StorageService } from './storage.service';
 import { firebaseConfig } from '../environments/environment';
 import { MainIconComponent } from './main-icon/main-icon.component';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 firebase.initializeApp(firebaseConfig);
 
 export const db = {
@@ -63,7 +63,8 @@ export const db = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireModule,
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [ ProductService, StorageService ],
   bootstrap: [ AppComponent ]

@@ -10,11 +10,10 @@ export class FooterComponent implements OnInit {
   public inputtedEmail;
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onKeyup(event) {
-    var button =   <HTMLInputElement> document.getElementById("submitButton");
+    const button =   <HTMLInputElement> document.getElementById("submitButton");
     button.disabled = true;
     this.userEmail = event.target.value.trim();
     if (this.userEmail.length < 6 || this.userEmail.indexOf('@') === -1 ||  this.userEmail.indexOf('.') === -1 ||  this.userEmail.indexOf(' ') > -1) {
