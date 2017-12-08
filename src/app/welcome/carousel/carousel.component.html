@@ -1,5 +1,7 @@
 <mdb-carousel class="carousel slide" [animation]="'slide'" [interval]="slideSpeed">
-  <mdb-slide *ngFor="let slide of slides">
-      <img class="d-block w-100" src={{slide}} alt="First slide">
-  </mdb-slide>
+    <div class="child">
+    <mdb-slide *ngFor="let slide of slides">
+        <img class="d-block w-80" src={{slide}} alt="First slide">
+    </mdb-slide>
+    </div>
 </mdb-carousel>

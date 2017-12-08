@@ -1,6 +1,8 @@
-bran# Massah Store
+# MassahStore
 
-#### _Massah sells the finest scarves and apparel through our online portal. We source the most beautiful designs in the world, 10.2.17_
+[Check me out live!](https://massahcollection.firebaseapp.com/)
+
+#### _Massah sells the finest scarves and apparel through our online portal. We source the most beautiful designs in the world
 
 #### By _**Haneen Abu-Khater, Evan Johnson, Kate Mashokha, & Nicholas Raethke**_
 
@@ -9,8 +11,6 @@ bran# Massah Store
 _The Massah webstore runs with a lot of help from Angular2 and a big assist from Firebase for secure data storage.  Users are able to seemlessly navigate our store and checkout with ease and peace of mind.  They can connect with our fabulous social media pages, save items to their cart, and find links to sales, new collections, and interesting articles._
 
 #### Here are a few images from our beautiful site.
-
-Our Welcome Page is very interactive.  The large image is part of a carousel slideshow and almost everything else is an active link to other parts of the site, social media, or articles that may be of interest to our customers.
 
 ![A screenshot of our welcome page](src/resources/imgs/screenWel.png)
 
@@ -26,13 +26,12 @@ We provide secure authentication for our customers through Google Sign in.
 
 ![Secure Sign in with Google](src/resources/imgs/screenSign.png)
 
- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Workflow
 
 #### Trello Digital Stickies & Whiteboarding
 
-Our process began with a roundtable discussion captured on the the Trello Board.  We talked components/models/pipes/services, user stories, admin stories, and of course, items to give over to Patrick Swayze (that's right, the Cooler).
+Our process began with a roundtable discussion captured on the the Trello Board.  We talked components/models/pipes/services and user stories.
 
 ###### Here's that board in action.
 
@@ -43,10 +42,10 @@ We moved on to whiteboarding the layout of our components and pages, which in tu
 
 
 ***
-## Setup
+## For Developers
 
 ```console
-git clone
+git clone https://github.com/haneenabu/MassahStore.git
 ```
 ```console
 cd MassahStore
@@ -82,18 +81,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### License
 
 *MIT License. All Rights Reserved.*
-
-Copyright (c) 2017 **_Massah_**
-
-
-### Whiteboard Photo Appendix
-
-![Welcome to Massah Page](src/resources/imgs/welcome.jpg)
-
-![Our Collection Display](src/resources/imgs/collection.jpg)
-
-![Our Product Detail Design](src/resources/imgs/detail.jpg)
-
-![Our Account Page Layout](src/resources/imgs/account.jpg)
 
 Copyright (c) 2017 **_Massah Collection_**
