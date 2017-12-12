@@ -7,19 +7,20 @@ import { StorageService } from '../storage.service';
 })
 export class MainIconComponent implements OnInit {
   // tslint:disable-next-line:max-line-length
-  icon: 'https://firebasestorage.googleapis.com/v0/b/massahcollection.appspot.com/o/massah_signature.png?alt=media&token=70b37b72-35fa-4a7f-b00a-a12eef2db10b';
+  // icon: 'https://firebasestorage.googleapis.com/v0/b/massahcollection.appspot.com/o/massah_signature.png?alt=media&token=70b37b72-35fa-4a7f-b00a-a12eef2db10b';
+  icon;
 
   constructor(private storageService: StorageService) { }
 
   ngOnInit() {
-    // this.storageService
-    // .getPicture('massah_signature.png')
-    // .then(picURL => {
-    //   this.icon = picURL;
-    // })
-    // .catch(error => {
-    //   console.log(error);
-    // });
+    this.storageService
+    .getPicture('massah_signature.png')
+    .then(picURL => {
+      this.icon = picURL;
+    })
+    .catch(error => {
+      console.log(error);
+    });
   }
 
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-product-buttons'
+  selector: 'app-product-buttons',
+  template: ''
 })
 export class ProductButtonsComponent implements OnInit {
   @Input() childIndexValue;

@@ -1,6 +1,3 @@
-img {
-  margin-left: 12px;
-}
 a {
   color: black;
 }
@@ -18,4 +15,8 @@ a {
 }
 nav {
   border: 1px solid black;
+}
+nav ul:first-child {
+  position: relative;
+  float: left;
 }
