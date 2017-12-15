@@ -40,7 +40,7 @@ export class AddToCartService {
   removeItemFromCart(itemId: string, quantity: number) {
     let asObject = { itemId, quantity };
     let updatedCart = this.updatedCart( this.getCart(), asObject );
-    if(!updatedCart) return sessionStorage.clear();
+    if(!updatedCart) return sessionStorage.removeItem('myCart');
     sessionStorage.setItem('myCart', updatedCart);
   }
 

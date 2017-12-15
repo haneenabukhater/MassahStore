@@ -25,19 +25,7 @@
   max-width: 600px;
 }
 
-/*.panel:hover {
-   background-color: #cabece;
-   z-index: 1.1;
-   -webkit-transition: all 200ms ease-in;
-   -webkit-transform: scale(1.5);
-   -ms-transition: all 200ms ease-in;
-   -ms-transform: scale(1.5);
-   -moz-transition: all 200ms ease-in;
-   -moz-transform: scale(1.5);
-   transition: all 200ms ease-in;
-   transform: scale(1.1);
-}*/
-h2  {
+.flexChild {
   text-align: center;
   font-family: fantasy;
 }

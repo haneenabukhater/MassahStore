@@ -1,6 +1,7 @@
 <div class="flexParent">
   <div class="flexChild" *ngIf="!objectsArray">
-    <h2>Your cart appears to be empty</h2>
+    <h2>Your cart appears to be empty.</h2>
+    <button class="btn btn-primary">Shop Now!</button>
   </div>
   <div *ngFor="let item of objectsArray"  class="flexChild panel panel-default">
     <div class="panel-heading">
@@ -27,10 +28,10 @@
 <br>
 <br>
 <div class="childSummary container panel panel-default">
-    <div class="panel-heading">Checkout Coming Soon</div>
+    <div class="panel-heading">Payment with Stripe coming soon!</div>
     <div class="panel-body summary">
       <h5>Delivery address: <br><span class="itemDetails">250 Del Medio Ave, apt. 307 <br>Mountain View, CA 97225</span></h5>
-      <h1>Total: $ {{subTotal}}</h1>
+      <h1 *ngIf="subTotal">Total: {{subTotal}}</h1>
     <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
     </div>
 </div>
