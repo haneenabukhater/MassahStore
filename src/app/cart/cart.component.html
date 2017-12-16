@@ -1,7 +1,7 @@
 <div class="flexParent">
   <div class="flexChild" *ngIf="!objectsArray">
     <h2>Your cart appears to be empty.</h2>
-    <button class="btn btn-primary">Shop Now!</button>
+    <button class="btn btn-primary" routerLink="products/all"><a href="products/all">Shop Now!</a></button>
   </div>
   <div *ngFor="let item of objectsArray"  class="flexChild panel panel-default">
     <div class="panel-heading">

@@ -1,8 +1,8 @@
 a {
   color: black;
 }
-#dropdownBasic1 {
-  width: 120px;
+#dropdownBasic1 a {
+  color: black;
 }
 
 .dropdown-item {
@@ -10,7 +10,7 @@ a {
   max-width: 50px;
   padding-left: 20px;
 }
-
+/* styles for dropdowns */
 .d-inline-block p:hover {
   background-color: rgb(0, 175, 228);
   cursor: pointer;

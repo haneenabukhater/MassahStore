@@ -28,8 +28,12 @@ export class ProductListComponent implements OnInit {
       this.products = lastData;
     });
     this.currentRoute.params.forEach( parameters => {
-      this.category = parameters['category'];
-    })
+      if (!parameters['category']) {
+        this.category = 'all';
+      } else {
+        this.category = parameters['category'];
+      }
+    });
   }
 
   productWasClicked(clickedProduct) {
