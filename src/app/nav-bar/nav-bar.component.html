@@ -2,23 +2,22 @@
   <ul class="nav">
     <li class="nav-item">
       <a routerLink="">
-        <img src="/FBLogo.png" width="30" height="30" class="d-inline-block" alt="">
+        <img src="/FBLogo.png" width="30" height="30"  alt="Massah Collection">
       </a>
     </li>
     <li class="nav-item">
       <a routerLink="about">About</a>
     </li>
     <li ngbDropdown class="d-inline-block">
-      <a class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Collections</a>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <p>
-          <a class="dropdown-item" routerLink="products/all"> All</a>
+      <a ngbDropdownToggle>Collections</a>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" id="dropdowns">
+        <p routerLink="products/all" class="dropdown-item">All
         </p>
-        <p>
-          <a class="dropdown-item" routerLink="products/scarf"> Scarfs</a>
+        <p class="dropdown-item" routerLink="products/scarf">
+        Scarfs
         </p>
-        <p>
-          <a class="dropdown-item" routerLink="products/accessories"> Accessories</a>
+        <p class="dropdown-item" routerLink="products/accessories">
+        Accessories
         </p>
       </div>
     </li>

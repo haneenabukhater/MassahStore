@@ -14,10 +14,10 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class ProductListComponent implements OnInit {
   category: string;
   products: any[];
-  nextButton: boolean;
-  backButton: boolean = false;
-  num1: number = 0;
-  num2: number = 11;
+  nextButton = false;
+  backButton = false;
+  num1 = 0;
+  num2 = 11;
 
   constructor(private currentRoute: ActivatedRoute,
               private productService: ProductService,
