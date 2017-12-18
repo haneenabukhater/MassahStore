@@ -65,7 +65,7 @@ export const db = {
     AngularFireModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [ ProductService, StorageService ],
   bootstrap: [ AppComponent ]

@@ -2,6 +2,11 @@ h2{
   text-align: center;
   font-family: 'PT Sans', sans-serif;
 }
+.contact-form {
+  padding: 2em;
+  border: 1px solid black;
+  border-radius: 1%;
+}
 .container {
   text-align: center;
   width: 700px;
@@ -11,6 +16,7 @@ h2{
 
 textarea {
   height: 20%;
+  border: 1px solid #e8e9eb;
 }
 
 #signature{
@@ -29,12 +35,11 @@ textarea {
 label {
     display: block;
     margin-bottom: 5px;
-    font-family: "PT Serif",serif;
 }
-input, textarea, select {
+
+input, select {
     border: 1px solid #e8e9eb;
     background-color: #fff;
-    /*color: #000;*/
     max-width: 100%;
     line-height: 1.2;
     border-radius: 2px;

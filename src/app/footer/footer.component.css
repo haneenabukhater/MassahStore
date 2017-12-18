@@ -13,7 +13,6 @@
   flex-wrap: nowrap;
   justify-content: space-around;
 }
-
 .item {
   flex-grow: 1;
   margin-top: 20px;
@@ -40,6 +39,7 @@ li {
 
  #errorMessage {
    padding-top: 15px;
+   color: white;
  }
 
  #userEmail {
@@ -48,15 +48,13 @@ li {
   height: 25px;
  }
 
- input[type="submit"] {
+ input {
   margin-left: -60px;
-  height: 25px;
-  width: 60px;
-  background: black;
-  border: 0;
+  background: white;
+  font-size: 16px;
   -webkit-appearance: none;
   display: inline;
-  color: white;
+  color: black;
 }
 
 /* Social icons*/
@@ -93,6 +91,5 @@ li {
 }
 footer {
   position: relative;
-  z-index: -1;
   bottom: 0;
 }

@@ -10,22 +10,35 @@ export class FooterComponent implements OnInit {
   public inputtedEmail;
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   onKeyup(event) {
-    const button =   <HTMLInputElement> document.getElementById("submitButton");
+    const button = <HTMLInputElement>document.getElementById('submitButton');
     button.disabled = true;
-    this.userEmail = event.target.value.trim();
-    if (this.userEmail.length < 6 || this.userEmail.indexOf('@') === -1 ||  this.userEmail.indexOf('.') === -1 ||  this.userEmail.indexOf(' ') > -1) {
-      document.getElementById("errorMessage").innerHTML = "Enter the valid email";
+    const userEmail = event.target.value.trim();
+    if (!userEmail) {
+      return this.displayErrorMessage('');
+    }
+    if (!this.validEmail(userEmail)) {
+      this.displayErrorMessage('Please enter a valid email');
     } else {
-      document.getElementById("errorMessage").innerHTML = "";
+      this.displayErrorMessage('');
       button.disabled = false;
     }
-}
+  }
+  validEmail(email: string) {
+    return email.length > 6 &&
+      email.includes('@') &&
+      email.includes('.') &&
+      !email.includes(' ');
+  }
+
+  displayErrorMessage(message: string) {
+    document.getElementById('errorMessage').innerHTML = message;
+  }
 
   submitEmail() {
     this.inputtedEmail = this.userEmail;
-    document.getElementById("errorMessage").innerHTML = "Your email has been recorded!";
+    document.getElementById('errorMessage').innerHTML = 'Your email has been recorded!';
   }
 }
