@@ -1,6 +1,5 @@
 .total {
   background-color: grey;
-  margin-top: 250px;
   padding-top: 30px;
   padding-bottom: 10px;
   position: relative;
@@ -35,7 +34,7 @@ li {
   text-align: center;
   margin: 0px;
   padding: 0;
-  fontext-align: center;
+  text-align: center;
   font-weight: bold;
  }
 

@@ -2,11 +2,15 @@ h2{
   text-align: center;
   font-family: 'PT Sans', sans-serif;
 }
-.container{
+.container {
   text-align: center;
   width: 700px;
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
   padding-bottom: 25px;
+}
+
+textarea {
+  height: 20%;
 }
 
 #signature{
@@ -37,7 +41,6 @@ input, textarea, select {
     font-family: "PT Serif",serif;
     color: #788188;
     margin: 0 0 19.44444px;
-
 }
 body, input, textarea, button, select, p {
     font-size: 16px;
