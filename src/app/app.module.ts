@@ -16,7 +16,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './welcome/carousel/carousel.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -29,7 +28,8 @@ import { StorageService } from './storage.service';
 import { firebaseConfig } from '../environments/environment';
 import { MainIconComponent } from './main-icon/main-icon.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
+import { BottomImgBarComponent } from './welcome/bottom-img-bar/bottom-img-bar.component';
+import { CheckoutComponent } from './cart/checkout/checkout.component';
 firebase.initializeApp(firebaseConfig);
 
 export const db = {
@@ -53,7 +53,8 @@ export const db = {
     FilterTypePipe,
     ProductButtonsComponent,
     CleanupDataComponent,
-    MainIconComponent
+    MainIconComponent,
+    BottomImgBarComponent
   ],
   imports: [
     BrowserModule,

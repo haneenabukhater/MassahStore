@@ -1,40 +1,26 @@
 .flexParent {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   flex-direction: column;
   margin-bottom: 70px;
   margin-top: 50px;
 }
 .flexChild {
   align-self: auto;
-  /*max-width:  50%;*/
+  max-width: 30%;
+  margin: auto;
 }
 .itemInfo {
   display: block;
-  float: right;
   margin-left: 5px;
+  margin: auto;
 }
 
 .itemDetails {
   font-weight: 200;
 }
 
-.childSummary {
-  text-align: center;
-  max-width: 600px;
-}
-
-.flexChild {
-  text-align: center;
-  font-family: fantasy;
-}
-.panel-heading {
-  width: 100%;
-  font-family: sans-serif;
-  font-weight: 300;
-}
-.childSummary  {
-  padding-bottom: 100px;
-  margin-bottom: 100px;
+img {
+  width: 50%;
+  height: 30%;
 }
