@@ -13,6 +13,7 @@ export class NavBarComponent implements OnInit {
   user;
   public isLoggedIn: Boolean;
   public userName: String;
+  public logoURI = 'https://firebasestorage.googleapis.com/v0/b/massahcollection.appspot.com/o/FBLogo.png?alt=media&token=91487cd0-8ef7-43e6-b670-bcd4bef574c9';
 
   constructor(public authService: AuthenticationService) {
     this.authService.user.subscribe(user =>  {
