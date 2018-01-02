@@ -29,6 +29,7 @@ import { StorageService } from './storage.service';
 import { firebaseConfig } from '../environments/environment';
 import { MainIconComponent } from './main-icon/main-icon.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { WelcomeExtrasBarComponent } from './welcome/welcome-extras-bar/welcome-extras-bar.component';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -53,7 +54,8 @@ export const db = {
     FilterTypePipe,
     ProductButtonsComponent,
     CleanupDataComponent,
-    MainIconComponent
+    MainIconComponent,
+    WelcomeExtrasBarComponent
   ],
   imports: [
     BrowserModule,

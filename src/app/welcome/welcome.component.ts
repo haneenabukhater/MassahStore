@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent {
+  title: 'Welcome to Massah';
 
   constructor(
     private router: Router
