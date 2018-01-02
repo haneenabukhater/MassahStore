@@ -19,6 +19,11 @@
   margin-bottom: 15px;
 }
 
+#subscribe * {
+  text-align: center;
+  margin: auto;
+}
+
 li {
   list-style: none;
   font-weight: bold;
@@ -43,7 +48,7 @@ li {
  }
 
  #userEmail {
-  width: 260px;
+  /* width: 260px; */
   color: black;
   height: 25px;
  }
