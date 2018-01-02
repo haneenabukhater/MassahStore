@@ -1,13 +1,16 @@
-.total {
+footer {
+  position: relative;
+  bottom: 0;
   background-color: grey;
+}
+
+.outer {
   padding-top: 30px;
   padding-bottom: 10px;
   position: relative;
-  display: block;
+  /* display: block; */
   bottom: 0;
   width: 100%;
-}
-.outer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -19,10 +22,6 @@
   margin-bottom: 15px;
 }
 
-#subscribe * {
-  text-align: center;
-  margin: auto;
-}
 
 li {
   list-style: none;
@@ -42,25 +41,6 @@ li {
   font-weight: bold;
  }
 
- #errorMessage {
-   padding-top: 15px;
-   color: white;
- }
-
- #userEmail {
-  /* width: 260px; */
-  color: black;
-  height: 25px;
- }
-
- input {
-  margin-left: -60px;
-  background: white;
-  font-size: 16px;
-  -webkit-appearance: none;
-  display: inline;
-  color: black;
-}
 
 /* Social icons*/
 .fa-facebook {
@@ -93,8 +73,4 @@ li {
   margin: 5px 3px;
   border-radius: 50%;
   text-align: center;
-}
-footer {
-  position: relative;
-  bottom: 0;
 }
