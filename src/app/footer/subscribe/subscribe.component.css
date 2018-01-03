@@ -1,24 +1,15 @@
 #errorMessage {
     padding-top: 15px;
-    color: white;
-}
-
-#userEmail {
-    /* width: 260px; */
-    color: black;
-    height: 25px;
 }
 
 input {
-    margin-left: -60px;
     background: white;
     font-size: 16px;
     -webkit-appearance: none;
-    display: inline;
     color: black;
 }
 
-#subscribe * {
-    text-align: center;
+#subscribe {
     margin: auto;
-  }
+    text-align: center;
+}

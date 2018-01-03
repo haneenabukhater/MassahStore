@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SubscribeComponent implements OnInit {
   public userEmail;
   public inputtedEmail;
+  errorMessage;
 
   constructor() { }
 
@@ -18,12 +19,12 @@ export class SubscribeComponent implements OnInit {
     button.disabled = true;
     const userEmail = event.target.value.trim();
     if (!userEmail) {
-      return this.displayErrorMessage('');
+      return this.errorMessage = '';
     }
     if (!this.validEmail(userEmail)) {
-      this.displayErrorMessage('Please enter a valid email');
+      this.errorMessage = 'Please enter a valid email';
     } else {
-      this.displayErrorMessage('');
+      this.errorMessage = '';
       button.disabled = false;
     }
   }
@@ -34,13 +35,14 @@ export class SubscribeComponent implements OnInit {
       !email.includes(' ');
   }
 
-  displayErrorMessage(message: string) {
-    document.getElementById('errorMessage').innerHTML = message;
-  }
-
   submitEmail() {
     this.inputtedEmail = this.userEmail;
-    document.getElementById('errorMessage').innerHTML = 'Your email has been recorded!';
+    this.toastMessage('Your email has been recorded!');
   }
-
+  toastMessage(string) {
+    this.errorMessage = string;
+    setTimeout(() => {
+      this.errorMessage = '';
+    }, 1000);
+  }
 }
