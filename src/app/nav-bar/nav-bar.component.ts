@@ -36,4 +36,14 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  handleNavButtonClick() {
+    const $navbar = document.getElementById('navbarResponsive');
+    const _closed = $navbar.classList.contains('collapse');
+    if (_closed) {
+      $navbar.classList.remove('collapse');
+    } else {
+      $navbar.classList.add('collapse');
+    }
+  }
 }
