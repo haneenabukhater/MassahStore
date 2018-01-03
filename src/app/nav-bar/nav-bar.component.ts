@@ -35,6 +35,10 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit() {
+    const el = document.getElementsByClassName('nav-link');
+    for (let i = 0; i < el.length; i++) {
+      el[i].addEventListener('click', this.handleNavButtonClick);
+    }
   }
 
   handleNavButtonClick() {
