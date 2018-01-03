@@ -1,29 +1,7 @@
 <footer>
-  <div class="total" id="mainFooter">
-    <div class="outer">
-      <div class="item"></div>
-      <div class="item">
-        <ul>
-          <li><a routerLink="about"><p>About Us</p></a></li>
-          <li><a routerLink="products/scarf"><p>Scarves</p></a></li>
-          <li><a routerLink="products/accessories"><p>Accesories</p></a></li>
-        </ul>
-      </div>
-      <div class="item">
-        <li><a routerLink="contact"><p>Contact Us</p></a></li>
-        <li><p>Follow Us On Media</p></li>
-        <a href="https://www.facebook.com/massahcollection/" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/massahco" class="fa fa-twitter"></a>
-        <a href="https://www.instagram.com/massahc/" class="fa fa-instagram"></a>
-      </div>
-      <div class="item">
-        <li><p>Subscribe to our Newsletter!</p></li>
-        <input #userEmail type="email" (keyup)="onKeyup($event)" placeholder="Enter your email address" style="width: 260px;">
-        <button id="submitButton" (click)="submitEmail(); userEmail.value='';" class="btn btn-primary">Subscribe</button>
-        <p id="errorMessage"></p>
-      </div>
-    </div>
-    <hr>
-    <p id="copyright">© 2017 Massah, Inc. All Rights Reserved</p>
-  </div>
+  <app-social-icons></app-social-icons>
+  <app-subscribe></app-subscribe>
+  <app-footer-links></app-footer-links>
+  <hr>
+  <p id="copyright">© 2017 Massah, Inc. All Rights Reserved</p>
 </footer>

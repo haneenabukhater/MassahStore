@@ -22,14 +22,18 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { FilterTypePipe } from './filter-type.pipe';
 import { ProductButtonsComponent } from './product-list/product-buttons/product-buttons.component';
+import { CheckoutComponent } from './cart/checkout/checkout.component';
 import { CleanupDataComponent } from './cleanup-data/cleanup-data.component';
 import { ProductService } from './product.service';
 import { StorageService } from './storage.service';
 import { firebaseConfig } from '../environments/environment';
 import { MainIconComponent } from './main-icon/main-icon.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { BottomImgBarComponent } from './welcome/bottom-img-bar/bottom-img-bar.component';
-import { CheckoutComponent } from './cart/checkout/checkout.component';
+import { WelcomeExtrasBarComponent } from './welcome/welcome-extras-bar/welcome-extras-bar.component';
+import { SubscribeComponent } from './footer/subscribe/subscribe.component';
+import { FooterLinksComponent } from './footer/footer-links/footer-links.component';
+import { SocialIconsComponent } from './footer/social-icons/social-icons.component';
+
 firebase.initializeApp(firebaseConfig);
 
 export const db = {
@@ -54,7 +58,10 @@ export const db = {
     ProductButtonsComponent,
     CleanupDataComponent,
     MainIconComponent,
-    BottomImgBarComponent
+    WelcomeExtrasBarComponent,
+    SubscribeComponent,
+    FooterLinksComponent,
+    SocialIconsComponent
   ],
   imports: [
     BrowserModule,

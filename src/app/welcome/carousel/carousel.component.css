@@ -1,13 +1,18 @@
-img {
-  height: 400px;
-  width: 600px;
-}
-
 mdb-carousel {
   display: flex;
   justify-content: center;
 }
 
-.child {
-  flex: none | [ <'flex-grow'> ];
+mdb-slide img {
+  height: 400px;
+  width: 600px;
+  flex: 'flex-grow';
+}
+
+@media only screen and (max-width: 620px) {
+  mdb-slide img {
+    height: 70%;
+    width: 100%;
+    padding: 1em;
+  }
 }

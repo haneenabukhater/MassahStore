@@ -1,95 +1,15 @@
-.total {
-  background-color: grey;
-  padding-top: 30px;
-  padding-bottom: 10px;
+footer {
   position: relative;
-  display: block;
   bottom: 0;
+  background-color: grey;
   width: 100%;
-}
-.outer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-}
-.item {
-  flex-grow: 1;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-
-li {
-  list-style: none;
-  font-weight: bold;
-  margin-bottom: 10px;
   color: white;
+  padding: 1em 0;
 }
- a {
-  color: white;
- }
-
- #copyright {
+#copyright {
   text-align: center;
   margin: 0px;
   padding: 0;
   text-align: center;
   font-weight: bold;
- }
-
- #errorMessage {
-   padding-top: 15px;
-   color: white;
- }
-
- #userEmail {
-  width: 260px;
-  color: black;
-  height: 25px;
- }
-
- input {
-  margin-left: -60px;
-  background: white;
-  font-size: 16px;
-  -webkit-appearance: none;
-  display: inline;
-  color: black;
-}
-
-/* Social icons*/
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa {
-  padding: 5px;
-  font-size: 15px;
-  width: 25px;
-  margin: 5px 3px;
-  border-radius: 50%;
-  text-align: center;
-}
-footer {
-  position: relative;
-  bottom: 0;
 }

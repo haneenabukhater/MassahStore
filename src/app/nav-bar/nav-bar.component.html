@@ -2,7 +2,7 @@
   <ul class="nav">
     <li class="nav-item">
       <a routerLink="">
-        <img src="/FBLogo.png" width="30" height="30"  alt="Massah Collection">
+        <img src="{{logoURI}}" width="30" height="30"  alt="Massah Collection">
       </a>
     </li>
     <li class="nav-item">
@@ -30,7 +30,7 @@
       <a routerLink="cart">
         <span class="glyphicon glyphicon-shopping-cart"></span> My Cart</a>
     </li>
-    <li *ngIf="isLoggedIn">
+    <!-- <li *ngIf="isLoggedIn"> {% endcomment %}
       <a>{{userName}}</a>
       <a (click)="logout()">
         <span class="glyphicon glyphicon-user"></span>Log out</a>
@@ -38,6 +38,6 @@
     <li *ngIf="!isLoggedIn">
       <a (click)="login()">
         <span class="glyphicon glyphicon-user"></span>Log in</a>
-    </li>
+    </li> -->
   </ul>
 </nav>

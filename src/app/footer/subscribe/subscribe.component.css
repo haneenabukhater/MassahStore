@@ -1,0 +1,15 @@
+#errorMessage {
+    padding-top: 15px;
+}
+
+input {
+    background: white;
+    font-size: 16px;
+    -webkit-appearance: none;
+    color: black;
+}
+
+#subscribe {
+    margin: auto;
+    text-align: center;
+}
