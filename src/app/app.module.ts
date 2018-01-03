@@ -32,6 +32,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { WelcomeExtrasBarComponent } from './welcome/welcome-extras-bar/welcome-extras-bar.component';
 import { SubscribeComponent } from './footer/subscribe/subscribe.component';
 import { FooterLinksComponent } from './footer/footer-links/footer-links.component';
+import { SocialIconsComponent } from './footer/social-icons/social-icons.component';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -59,7 +60,8 @@ export const db = {
     MainIconComponent,
     WelcomeExtrasBarComponent,
     SubscribeComponent,
-    FooterLinksComponent
+    FooterLinksComponent,
+    SocialIconsComponent
   ],
   imports: [
     BrowserModule,

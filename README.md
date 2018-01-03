@@ -65,11 +65,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## To Do List
 
-1. When browsing scarves on any page but the first, a navigation to the accessories page breaks.
 2. Sizing and spacing of all images
 3. Shop now button in welcome component
 4. Links to images coming from an async call, need to cache for future
 5. Cart total is stored in session
+6. Contact us mobile styling. Fixed px right now
 
 
 ## Support and contact details
