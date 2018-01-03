@@ -8,31 +8,31 @@
         <span class="glyphicon glyphicon-user"></span>Log in</a>
     </li> -->
 <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-    <a routerLink="" class="navbar-brand nav-item nav-link">
-      <img src="{{logoURI}}" width="30" height="30" alt="Massah Collection">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarResponsive" (click)="handleNavButtonClick()"
-      data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <div class="navbar-nav">
-        <div ngbDropdown class="d-inline-block">
-          <a class="nav-item nav-link" ngbDropdownToggle>Collections</a>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" id="dropdowns">
-            <a routerLink="products/all" class="dropdown-item">All
-            </a>
-            <a class="dropdown-item" routerLink="products/scarf">
-              Scarfs
-            </a>
-            <a class="dropdown-item" routerLink="products/accessories">
-              Accessories
-            </a>
-          </div>
+  <a routerLink="" class="navbar-brand nav-item nav-link">
+    <img src="{{logoURI}}" width="30" height="30" alt="Massah Collection">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarResponsive" (click)="handleNavButtonClick()"
+    data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <div class="navbar-nav">
+      <div ngbDropdown class="d-inline-block">
+        <a class="nav-item nav-link" ngbDropdownToggle>Collections</a>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" id="dropdowns">
+          <a routerLink="products/all" class="dropdown-item">All
+          </a>
+          <a class="dropdown-item" routerLink="products/scarf">
+            Scarfs
+          </a>
+          <a class="dropdown-item" routerLink="products/accessories">
+            Accessories
+          </a>
         </div>
-        <a class="nav-item nav-link" routerLink="about">About</a>
-        <a class="nav-item nav-link glyphicon glyphicon-shopping-cart" routerLink="cart">MyCart</a>
-        <a class="nav-item nav-link" routerLink="contact">Contact Us</a>
       </div>
+      <a class="nav-item nav-link" routerLink="about">About</a>
+      <a class="nav-item nav-link glyphicon glyphicon-shopping-cart" routerLink="cart">MyCart</a>
+      <a class="nav-item nav-link" routerLink="contact">Contact Us</a>
     </div>
+  </div>
 </nav>
