@@ -16,14 +16,14 @@ export class NavBarComponent implements OnInit {
   public logoURI = 'https://firebasestorage.googleapis.com/v0/b/massahcollection.appspot.com/o/FBLogo.png?alt=media&token=91487cd0-8ef7-43e6-b670-bcd4bef574c9';
 
   constructor(public authService: AuthenticationService) {
-    this.authService.user.subscribe(user =>  {
-      if (user == null) {
-       this.isLoggedIn = false;
-      } else {
-       this.isLoggedIn = true;
-       this.userName = user.displayName;
-      }
-    });
+    // this.authService.user.subscribe(user =>  {
+    //   if (user == null) {
+    //    this.isLoggedIn = false;
+    //   } else {
+    //    this.isLoggedIn = true;
+    //    this.userName = user.displayName;
+    //   }
+    // });
   }
 
   login() {
@@ -35,6 +35,10 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.closeNavBarWhenItemsClicked();
+  }
+  
+  closeNavBarWhenItemsClicked() {
     const el = document.getElementsByClassName('nav-link');
     for (let i = 0; i < el.length; i++) {
       el[i].addEventListener('click', this.handleNavButtonClick);

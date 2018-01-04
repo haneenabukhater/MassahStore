@@ -8,7 +8,7 @@
         <span class="glyphicon glyphicon-user"></span>Log in</a>
     </li> -->
 <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-  <a routerLink="" class="navbar-brand nav-item nav-link">
+  <a routerLink="" class="navbar-brand nav-item">
     <img src="{{logoURI}}" width="30" height="30" alt="Massah Collection">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarResponsive" (click)="handleNavButtonClick()"
@@ -16,8 +16,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
-    <div class="navbar-nav">
-      <div ngbDropdown class="d-inline-block">
+    <div class="navbar-nav navbar-left">
+      <a class="nav-item nav-link" routerLink="about">About</a>
+      <div ngbDropdown>
         <a class="nav-item" ngbDropdownToggle>Collections</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" id="dropdowns">
           <a class="dropdown-item nav-link" routerLink="products/all">All
@@ -30,7 +31,9 @@
           </a>
         </div>
       </div>
-      <a class="nav-item nav-link" routerLink="about">About</a>
+    </div>
+
+    <div class="navbar-nav navbar-right">
       <a class="nav-item nav-link glyphicon glyphicon-shopping-cart" routerLink="cart">MyCart</a>
       <a class="nav-item nav-link" routerLink="contact">Contact Us</a>
     </div>
