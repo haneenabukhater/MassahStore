@@ -9,16 +9,16 @@
 
 .flexChild:hover {
   cursor: pointer;
-  background-color: black;
+  opacity: .6;
 }
 
 .panel-footer {
   text-align: center;
+  background-color: lightgrey;
 }
 
 .nav-buttons {
   width: 100%;
-  /*border: 1px solid black;*/
   display: block;
   padding-bottom: 75px;
   margin-bottom: 25px;

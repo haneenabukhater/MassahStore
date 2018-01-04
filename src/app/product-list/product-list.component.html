@@ -7,9 +7,8 @@
 <div class="flexParent">
   <div *ngFor = "let product of products
                 | filterType:category | slice:num1:num2; let i=index"
-                class="flexChild"
                 (click)="productWasClicked(product)"
-                class="panel panel-default"
+                class="flexChild panel panel-default"
   >
   <app-product-buttons [childIndexValue]="i"
                         (indexChecker)="evaluateNextButton($event)"
