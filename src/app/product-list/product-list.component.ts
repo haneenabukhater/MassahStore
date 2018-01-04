@@ -20,14 +20,21 @@ export class ProductListComponent implements OnInit {
   num2 = 11;
 
   constructor(private currentRoute: ActivatedRoute,
-              private productService: ProductService,
-              private myRouter: Router
-            ) { }
+    private productService: ProductService,
+    private myRouter: Router
+  ) { }
   ngOnInit() {
-    this.productService.getProducts().subscribe( lastData => {
+    this.grabAllProductsFromFireBase();
+    this.grabCategoryFromURI();
+  }
+  grabAllProductsFromFireBase() {
+    this.productService.getProducts().subscribe(lastData => {
       this.products = lastData;
+      console.log(lastData.length);
     });
-    this.currentRoute.params.forEach( parameters => {
+  }
+  grabCategoryFromURI() {
+    this.currentRoute.params.forEach(parameters => {
       if (!parameters['category']) {
         this.category = 'all';
       } else {
@@ -35,7 +42,6 @@ export class ProductListComponent implements OnInit {
       }
     });
   }
-
   productWasClicked(clickedProduct) {
     this.myRouter.navigate(['products/item', clickedProduct.$key]);
   }
