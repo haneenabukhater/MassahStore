@@ -12,7 +12,7 @@ export class FilterTypePipe implements PipeTransform {
 
     return input.filter( product => {
       return product.Tags==undefined || product.Tags.includes(category);
-    })
+    });
   }
 
 }

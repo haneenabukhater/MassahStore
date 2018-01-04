@@ -4,10 +4,12 @@
   <button *ngIf="nextButton" (click)="nextPage()" class="btn btn-warning">Next Page</button>
 </div>
 -->
-
+<button>$</button>
+<button>$$</button>
+<button>$$$</button>
 <div class="flexParent">
   <div *ngFor = "let product of products
-                | filterType:category | slice:num1:num2; let i=index"
+                | slice:num1:num2; let i=index"
                 (click)="productWasClicked(product)"
                 class="flexChild panel panel-default"
   >

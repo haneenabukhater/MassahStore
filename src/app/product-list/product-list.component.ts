@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
@@ -11,9 +11,10 @@ import { FirebaseListObservable } from 'angularfire2/database';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, DoCheck {
   category: string;
   products: any[];
+  productsAll: any[];
   nextButton = false;
   backButton = false;
   num1 = 0;
@@ -27,10 +28,20 @@ export class ProductListComponent implements OnInit {
     this.grabAllProductsFromFireBase();
     this.grabCategoryFromURI();
   }
+  ngDoCheck() {
+    this.filterProductsByCategory();
+  }
+  filterProductsByCategory() {
+    if (this.category === 'all') {
+      return this.products = this.productsAll;
+    }
+    this.products = this.productsAll.filter( product => {
+      return product.Tags === undefined || product.Tags.includes(this.category);
+    });
+  }
   grabAllProductsFromFireBase() {
     this.productService.getProducts().subscribe(lastData => {
-      this.products = lastData;
-      console.log(lastData.length);
+      this.productsAll = lastData;
     });
   }
   grabCategoryFromURI() {
