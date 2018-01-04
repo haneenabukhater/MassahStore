@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AddToCartService } from '../add-to-cart.service';
+import { AddToCartService } from '../../add-to-cart.service';
 import { FirebaseListObservable } from 'angularfire2/database';
-import { ProductService } from '../product.service';
+import { ProductService } from '../../product.service';
 import { Observable } from 'rxjs/Observable';
 import * as Rx from 'rxjs';
 

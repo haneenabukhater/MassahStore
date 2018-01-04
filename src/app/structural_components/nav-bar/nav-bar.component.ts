@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AuthenticationService } from '../authentication.service';
-import { AppComponent } from '../app.component';
+import { AuthenticationService } from '../../authentication.service';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-nav-bar',

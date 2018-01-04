@@ -3,9 +3,8 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
-import { Product } from '../product.model';
-import { ProductService } from '../product.service';
-import { AddToCartService } from '../add-to-cart.service';
+import { ProductService } from '../../product.service';
+import { AddToCartService } from '../../add-to-cart.service';
 
 
 @Component({

@@ -1,0 +1,24 @@
+.flexParent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.flexChild {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'>]
+}
+
+.flexChild:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
+
+.panel-footer {
+  text-align: center;
+  background-color: lightgrey;
+}

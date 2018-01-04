@@ -1,0 +1,14 @@
+<app-product-buttons [backButton]="backButton" [nextButton]="nextButton" (buttonController)="paginatorClicked($event)">
+</app-product-buttons>
+<button>$</button>
+<button>$$</button>
+<button>$$$</button>
+<div class="flexParent">
+  <div *ngFor="let product of products | slice:num1:num2;" (click)="productWasClicked(product)" class="flexChild panel panel-default">
+    <img src={{product.Image_Src}} alt="">
+    <div class="panel-footer">
+      <h3 (click)="goToDetailProduct">{{product.Title}}</h3>
+      <h4>${{product.Variant_Price}}</h4>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,7 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
-import { ProductService } from '../product.service';
-import { Product } from '../product.model';
+import { ProductService } from '../../product.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
@@ -18,7 +16,8 @@ export class ProductListComponent implements OnInit, DoCheck {
   nextButton = false;
   backButton = false;
   num1 = 0;
-  num2 = 11;
+  num2 = 12;
+  PAGINATOR_COUNT = 12;
 
   constructor(private currentRoute: ActivatedRoute,
     private productService: ProductService,
@@ -29,7 +28,10 @@ export class ProductListComponent implements OnInit, DoCheck {
     this.grabCategoryFromURI();
   }
   ngDoCheck() {
-    this.filterProductsByCategory();
+    if (this.productsAll) {
+      this.filterProductsByCategory();
+      this.evaluateNextButton();
+    }
   }
   filterProductsByCategory() {
     if (this.category === 'all') {
@@ -56,22 +58,39 @@ export class ProductListComponent implements OnInit, DoCheck {
   productWasClicked(clickedProduct) {
     this.myRouter.navigate(['products/item', clickedProduct.$key]);
   }
-  ngAfterContentInit() {
-    this.evaluateNextButton;
+  evaluateNextButton() {
+    if (this.products.length > this.PAGINATOR_COUNT) {
+      this.nextButton = true;
+    } else {
+      this.nextButton = false;
+    }
+    console.log('next button', this.nextButton, this.products.length);
   }
-  evaluateNextButton(fromChild) {
-    this.nextButton = fromChild;
+  paginatorClicked(buttonValue) {
+    if (buttonValue === 'next') {
+      this.nextPage();
+    } else {
+      this.backPage();
+    }
   }
   nextPage() {
-    this.cycleProducts(12);
+    this.cycleProducts(this.PAGINATOR_COUNT);
     this.backButton = true;
   }
   backPage() {
-    this.cycleProducts(-12);
+    this.cycleProducts(-this.PAGINATOR_COUNT);
   }
   cycleProducts(input) {
     this.num1 += input;
     this.num2 += input;
-    if (this.num1 === 0) this.backButton = false;
+    const itemsLeft = this.products.length - this.num2;
+    console.log(itemsLeft);
+    if (this.num1 === 0) {
+      this.backButton = false;
+    }
+    console.log(itemsLeft < this.PAGINATOR_COUNT);
+    if (itemsLeft < this.PAGINATOR_COUNT) {
+      this.nextButton = false;
+    }
   }
 }
