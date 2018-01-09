@@ -6,7 +6,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   <div class="container nav-buttons">
     <button *ngIf="backButton" (click)="handleBack()" class="btn btn-primary">Previous</button>
     <button *ngIf="nextButton" (click)="handleNext()" class="btn btn-warning">Next Page</button>
-</div>`
+</div>`,
+  styleUrls: ['./product-buttons.component.css']
 })
 export class ProductButtonsComponent implements OnInit {
   @Input() backButton;

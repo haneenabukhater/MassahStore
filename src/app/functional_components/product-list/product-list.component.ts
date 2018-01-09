@@ -24,18 +24,18 @@ export class ProductListComponent implements OnInit, DoCheck {
     private myRouter: Router
   ) { }
   ngOnInit() {
-    console.log('ON INIT is the only place where im grabbing the URI');
     this.grabAllProductsFromFireBase();
     this.grabCategoryFromURI();
   }
   ngDoCheck() {
-    console.log(this.category);
+    console.log(this.category)
     if (this.productsAll) {
       this.filterProductsByCategory();
       this.evaluateNextButton();
     }
   }
   filterProductsByCategory() {
+    console.log('filtering', this.category);
     if (this.category === 'all') {
       return this.products = this.productsAll;
     }
@@ -49,6 +49,7 @@ export class ProductListComponent implements OnInit, DoCheck {
     });
   }
   grabCategoryFromURI() {
+    console.log('grabbing category');
     this.currentRoute.params.forEach(parameters => {
       if (!parameters['category']) {
         this.category = 'all';
@@ -66,7 +67,6 @@ export class ProductListComponent implements OnInit, DoCheck {
     } else {
       this.nextButton = false;
     }
-    console.log('next button', this.nextButton, this.products.length);
   }
   paginatorClicked(buttonValue) {
     if (buttonValue === 'next') {
@@ -86,11 +86,9 @@ export class ProductListComponent implements OnInit, DoCheck {
     this.num1 += input;
     this.num2 += input;
     const itemsLeft = this.products.length - this.num2;
-    console.log(itemsLeft);
     if (this.num1 === 0) {
       this.backButton = false;
     }
-    console.log(itemsLeft < this.PAGINATOR_COUNT);
     if (itemsLeft < this.PAGINATOR_COUNT) {
       this.nextButton = false;
     }
