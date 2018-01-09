@@ -10,7 +10,7 @@ export class ProductService {
   getProducts(){
     return this.database.list('products');
   }
-  getProductById(productId: string) {
+    getProductById(productId: string) {
    return this.database.object('products/' + productId);
  }
  removeProduct() {

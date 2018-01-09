@@ -24,10 +24,12 @@ export class ProductListComponent implements OnInit, DoCheck {
     private myRouter: Router
   ) { }
   ngOnInit() {
+    console.log('ON INIT is the only place where im grabbing the URI');
     this.grabAllProductsFromFireBase();
     this.grabCategoryFromURI();
   }
   ngDoCheck() {
+    console.log(this.category);
     if (this.productsAll) {
       this.filterProductsByCategory();
       this.evaluateNextButton();
@@ -37,7 +39,7 @@ export class ProductListComponent implements OnInit, DoCheck {
     if (this.category === 'all') {
       return this.products = this.productsAll;
     }
-    this.products = this.productsAll.filter( product => {
+    this.products = this.productsAll.filter(product => {
       return product.Tags === undefined || product.Tags.includes(this.category);
     });
   }
