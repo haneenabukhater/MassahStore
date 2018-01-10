@@ -43,6 +43,6 @@ export class SubscribeComponent implements OnInit {
     this.errorMessage = string;
     setTimeout(() => {
       this.errorMessage = '';
-    }, 1000);
+    }, 2000);
   }
 }
