@@ -26,14 +26,23 @@ export class ProductListComponent implements OnInit, DoCheck {
   ) {}
   ngOnInit() {
     this.grabAllProductsFromFireBase();
-    this.grabCategoryFromURI();
   }
   ngDoCheck() {
-    console.log(this.category);
+    const prevCategory = this.category;
+    this.grabCategoryFromURI();
+    if (prevCategory !== this.category) {
+      this.resetPagination();
+      console.log('reload');
+    }
     if (this.productsAll) {
       this.filterProductsByCategory();
       this.evaluateNextButton();
     }
+  }
+  resetPagination() {
+    this.num1 = 0;
+    this.num2 = this.PAGINATOR_COUNT;
+    this.backButton = false;
   }
   filterProductsByCategory() {
     console.log('filtering', this.category);
@@ -50,12 +59,14 @@ export class ProductListComponent implements OnInit, DoCheck {
     });
   }
   grabCategoryFromURI() {
-    console.log('grabbing category');
-    console.log(this.currentRoute.snapshot.params.category)
-    this.currentRoute.params.forEach(parameters => {
-      if (!parameters['category']) { this.category = 'all'; }
-      else { this.category = parameters['category']; }
-    });
+    // console.log('grabbing category');
+    // console.log(this.currentRoute.snapshot.params.category);
+    this.category = this.currentRoute.snapshot.params.category;
+    console.log(this.category);
+    // this.currentRoute.params.forEach(parameters => {
+    //   if (!parameters['category']) { this.category = 'all'; }
+    //   else { this.category = parameters['category']; }
+    // });
   }
   productWasClicked(clickedProduct) {
     this.myRouter.navigate(['products/item', clickedProduct.$key]);
