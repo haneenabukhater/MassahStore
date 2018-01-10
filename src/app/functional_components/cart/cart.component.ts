@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { AddToCartService } from '../../add-to-cart.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { ProductService } from '../../product.service';
@@ -18,7 +20,8 @@ export class CartComponent implements OnInit {
   nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   constructor(
     private addToCartService: AddToCartService,
-    private productService: ProductService) {
+    private productService: ProductService,
+    private router: Router) {
   }
 
   ngOnInit() {
@@ -26,6 +29,9 @@ export class CartComponent implements OnInit {
       this.objectsArray = [];
       this.loadCartFromSessionStorage();
     }
+  }
+  productWasClicked(product) {
+    this.router.navigate(['products/item', product.$key]);
   }
 
   loadCartFromSessionStorage() {

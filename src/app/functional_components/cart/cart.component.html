@@ -3,7 +3,7 @@
     <h2>Your cart appears to be empty.</h2>
     <button class="btn btn-outline-primary" routerLink="/products/all">Shop Now!</button>
   </div>
-  <div *ngFor="let item of objectsArray" class="flexChild container panel panel-default">
+  <div *ngFor="let item of objectsArray" class="flexChild container panel panel-default" (click)="productWasClicked(item)">
     <div class="panel-heading">{{item.Title}}</div>
     <div class="panel-body">
       <img src={{item.Image_Src}} alt="" width="150px" height="150px">
