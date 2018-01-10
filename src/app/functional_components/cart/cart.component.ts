@@ -14,10 +14,10 @@ import * as Rx from 'rxjs';
 })
 export class CartComponent implements OnInit {
   objectsArray: any[] = null;
-  myObservable: FirebaseListObservable<any>;
   subTotal: '';
 
-  constructor(private addToCartService: AddToCartService,
+  constructor(
+    private addToCartService: AddToCartService,
     private productService: ProductService) {
   }
 
@@ -49,7 +49,7 @@ export class CartComponent implements OnInit {
     this.subTotal = '';
     this.subTotal += '$ ';
     this.subTotal += this.objectsArray.reduce(
-      function (accumulator, current) {
+      (accumulator, current) => {
         return accumulator + (current.Variant_Price * current.quantityInCart);
       }, 0);
   }

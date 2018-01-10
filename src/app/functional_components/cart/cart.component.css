@@ -1,14 +1,19 @@
 .flexParent {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
   margin-bottom: 70px;
   margin-top: 50px;
 }
-.flexChild {
-  align-self: auto;
-  /*max-width:  50%;*/
+@media only screen and (max-width: 518px) {
+  .panel-default {
+    width: 100%;
+  }
+}
+.panel {
+  width: 50%;
+  text-align: center;
+  max-width: 600px;
 }
 .itemInfo {
   display: block;
@@ -16,25 +21,10 @@
   margin-left: 5px;
 }
 
-.itemDetails {
-  font-weight: 200;
-}
-
-.childSummary {
-  text-align: center;
-  max-width: 600px;
-}
-
-.flexChild {
-  text-align: center;
-  font-family: fantasy;
-}
 .panel-heading {
-  width: 100%;
-  font-family: sans-serif;
-  font-weight: 300;
+  margin-top: .4em;
+  font-size: 2em;
+  color: red;
 }
-.childSummary  {
-  padding-bottom: 100px;
-  margin-bottom: 100px;
-}
+
+

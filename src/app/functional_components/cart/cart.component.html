@@ -3,10 +3,8 @@
     <h2>Your cart appears to be empty.</h2>
     <button class="btn btn-outline-primary" routerLink="/products/all">Shop Now!</button>
   </div>
-  <div *ngFor="let item of objectsArray"  class="flexChild panel panel-default">
-    <div class="panel-heading">
-      <p>{{item.Title}}</p>
-    </div>
+  <div *ngFor="let item of objectsArray"  class="flexChild container panel panel-default">
+    <div class="panel-heading">{{item.Title}}</div>
     <div class="panel-body">
       <img src={{item.Image_Src}} alt="" width="150px" height="150px">
       <div class="itemInfo">
@@ -29,9 +27,9 @@
 <br>
 <div class="childSummary container panel panel-default">
     <div class="panel-heading">Payment with Stripe coming soon!</div>
-    <div class="panel-body summary">
+    <div class="panel-body">
       <h5>Delivery address: <br><span class="itemDetails">250 Del Medio Ave, apt. 307 <br>Mountain View, CA 97225</span></h5>
-      <h1 *ngIf="subTotal">Total: {{subTotal}}</h1>
+      <h2 *ngIf="subTotal">Total: {{subTotal}}</h2>
     <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
     </div>
 </div>
