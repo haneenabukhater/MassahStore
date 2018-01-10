@@ -38,14 +38,12 @@ export class NavBarComponent implements OnInit {
     this.closeNavBarWhenItemsClicked();
   }
   ngDoCheck() {
-    this.removeNavRightClass();
   }
 
   closeNavBarWhenItemsClicked() {
     const navs = document.getElementsByClassName('nav-link');
-    // tslint:disable-next-line:forin
-    for (const nav in navs) {
-      navs[nav].addEventListener('click', this.handleNavButtonClick);
+    for (let i = 0; i < navs.length; i++) {
+      navs[i].addEventListener('click', this.handleNavButtonClick);
     }
   }
 
@@ -56,14 +54,6 @@ export class NavBarComponent implements OnInit {
       $navbar.classList.remove('collapse');
     } else {
       $navbar.classList.add('collapse');
-    }
-  }
-  removeNavRightClass() {
-    const $navRight = document.getElementsByClassName('navbar-nav')[1];
-    if (window.innerWidth <= 520) {
-      $navRight.classList.remove('navbar-right');
-    } else {
-      $navRight.classList.add('navbar-right');
     }
   }
 }

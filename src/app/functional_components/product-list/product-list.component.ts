@@ -19,16 +19,17 @@ export class ProductListComponent implements OnInit, DoCheck {
   num2 = 12;
   PAGINATOR_COUNT = 12;
 
-  constructor(private currentRoute: ActivatedRoute,
+  constructor(
+    private currentRoute: ActivatedRoute,
     private productService: ProductService,
     private myRouter: Router
-  ) { }
+  ) {}
   ngOnInit() {
     this.grabAllProductsFromFireBase();
     this.grabCategoryFromURI();
   }
   ngDoCheck() {
-    console.log(this.category)
+    console.log(this.category);
     if (this.productsAll) {
       this.filterProductsByCategory();
       this.evaluateNextButton();
@@ -50,12 +51,10 @@ export class ProductListComponent implements OnInit, DoCheck {
   }
   grabCategoryFromURI() {
     console.log('grabbing category');
+    console.log(this.currentRoute.snapshot.params.category)
     this.currentRoute.params.forEach(parameters => {
-      if (!parameters['category']) {
-        this.category = 'all';
-      } else {
-        this.category = parameters['category'];
-      }
+      if (!parameters['category']) { this.category = 'all'; }
+      else { this.category = parameters['category']; }
     });
   }
   productWasClicked(clickedProduct) {
