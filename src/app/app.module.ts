@@ -32,6 +32,7 @@ import { WelcomeExtrasBarComponent } from './page_components/welcome/welcome-ext
 import { SubscribeComponent } from './structural_components/footer/subscribe/subscribe.component';
 import { FooterLinksComponent } from './structural_components/footer/footer-links/footer-links.component';
 import { SocialIconsComponent } from './structural_components/footer/social-icons/social-icons.component';
+import { MoreShoppingButtonsComponent } from './functional_components/product-detail/more-shopping-buttons/more-shopping-buttons.component';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -59,7 +60,8 @@ export const db = {
     WelcomeExtrasBarComponent,
     SubscribeComponent,
     FooterLinksComponent,
-    SocialIconsComponent
+    SocialIconsComponent,
+    MoreShoppingButtonsComponent
   ],
   imports: [
     BrowserModule,

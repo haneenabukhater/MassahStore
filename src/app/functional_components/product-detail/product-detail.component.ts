@@ -17,7 +17,7 @@ export class ProductDetailComponent implements OnInit {
   public numberOfItems;
   productId: string;
   productToDisplay;
-  displayContinueShoppingMessage: boolean = false;
+  continueShopMessage: boolean = false;
   nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
@@ -37,17 +37,16 @@ export class ProductDetailComponent implements OnInit {
     });
   }
   addToCart(q: string) {
-    this.displayContinueShoppingMessage = true;
+    this.continueShopMessage = true;
     this.addToCartService.addItemToCart(this.productId, Number(q));
   }
 
   printBody() {
     document.getElementById('homies').innerHTML = this.productToDisplay.Body;
   }
-  continueShoppingWasClicked() {
-    this.myRouter.navigate(['products/all']);
-  }
-  myCartButtonWasClicked() {
-    this.myRouter.navigate(['cart']);
+  handleShop(event) {
+    event === 'shopping' ?
+      this.myRouter.navigate(['products/all']) :
+      this.myRouter.navigate(['cart']);
   }
 }

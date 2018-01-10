@@ -1,5 +1,4 @@
 <div class="flexinTwo container">
-
   <div class="electricBoogaloo panel panel-default">
     <img src={{productToDisplay.Image_Src}} alt="" width="300px" height="400px">
     <div class="panel-footer">
@@ -15,13 +14,9 @@
           </select>
         </div>
         <button (click)="addToCart(quantity.value)" class="btn btn-warning">Add to cart</button>
-        <button type="button" class="btn btn-info" (click)="continueShoppingWasClicked()">Continue Shopping</button>
+        <button type="button" class="btn btn-info" (click)="handleShop('shopping')">Continue Shopping</button>
       </div>
-      <div class="electricBoogaloo" id="displayMessage" *ngIf="displayContinueShoppingMessage">
-        <h3>Item added to your cart!</h3>
-        <button type="button" (click)="continueShoppingWasClicked()" class="btn btn-warning">Continue Shopping</button>
-        <button class="btn btn-info" (click)="myCartButtonWasClicked()"> My Cart</button>
-      </div>
+      <app-more-shopping-buttons [display]="continueShopMessage" (buttonClicked)="handleShop($event)"></app-more-shopping-buttons>
     </div>
   </div>
 </div>
