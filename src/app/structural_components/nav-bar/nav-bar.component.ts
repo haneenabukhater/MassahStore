@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthenticationService } from '../../authentication.service';
 import { AppComponent } from '../../app.component';
@@ -37,11 +37,15 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     this.closeNavBarWhenItemsClicked();
   }
-  
+  ngDoCheck() {
+    this.removeNavRightClass();
+  }
+
   closeNavBarWhenItemsClicked() {
-    const el = document.getElementsByClassName('nav-link');
-    for (let i = 0; i < el.length; i++) {
-      el[i].addEventListener('click', this.handleNavButtonClick);
+    const navs = document.getElementsByClassName('nav-link');
+    // tslint:disable-next-line:forin
+    for (const nav in navs) {
+      navs[nav].addEventListener('click', this.handleNavButtonClick);
     }
   }
 
@@ -52,6 +56,14 @@ export class NavBarComponent implements OnInit {
       $navbar.classList.remove('collapse');
     } else {
       $navbar.classList.add('collapse');
+    }
+  }
+  removeNavRightClass() {
+    const $navRight = document.getElementsByClassName('navbar-nav')[1];
+    if (window.innerWidth <= 520) {
+      $navRight.classList.remove('navbar-right');
+    } else {
+      $navRight.classList.add('navbar-right');
     }
   }
 }
