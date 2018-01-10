@@ -15,7 +15,7 @@ import * as Rx from 'rxjs';
 export class CartComponent implements OnInit {
   objectsArray: any[] = null;
   subTotal: '';
-
+  nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   constructor(
     private addToCartService: AddToCartService,
     private productService: ProductService) {
@@ -26,8 +26,6 @@ export class CartComponent implements OnInit {
       this.objectsArray = [];
       this.loadCartFromSessionStorage();
     }
-
-
   }
 
   loadCartFromSessionStorage() {
