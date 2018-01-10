@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ProductService } from '../../product.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-product-list',
@@ -32,7 +33,6 @@ export class ProductListComponent implements OnInit, DoCheck {
     this.grabCategoryFromURI();
     if (prevCategory !== this.category) {
       this.resetPagination();
-      console.log('reload');
     }
     if (this.productsAll) {
       this.filterProductsByCategory();
@@ -45,45 +45,30 @@ export class ProductListComponent implements OnInit, DoCheck {
     this.backButton = false;
   }
   filterProductsByCategory() {
-    console.log('filtering', this.category);
-    if (this.category === 'all') {
-      return this.products = this.productsAll;
-    }
-    this.products = this.productsAll.filter(product => {
-      return product.Tags === undefined || product.Tags.includes(this.category);
-    });
+    this.products = this.category === 'all' ?
+        this.productsAll :
+        this.productsAll.filter(product => {
+          return product.Tags === undefined || product.Tags.includes(this.category);
+        });
   }
   grabAllProductsFromFireBase() {
     this.productService.getProducts().subscribe(lastData => {
       this.productsAll = lastData;
-    });
+    }).unsubscribe;
   }
   grabCategoryFromURI() {
-    // console.log('grabbing category');
-    // console.log(this.currentRoute.snapshot.params.category);
     this.category = this.currentRoute.snapshot.params.category;
-    console.log(this.category);
-    // this.currentRoute.params.forEach(parameters => {
-    //   if (!parameters['category']) { this.category = 'all'; }
-    //   else { this.category = parameters['category']; }
-    // });
   }
   productWasClicked(clickedProduct) {
     this.myRouter.navigate(['products/item', clickedProduct.$key]);
   }
   evaluateNextButton() {
-    if (this.products.length > this.PAGINATOR_COUNT) {
-      this.nextButton = true;
-    } else {
-      this.nextButton = false;
-    }
+    this.products.length > this.PAGINATOR_COUNT ?
+      this.nextButton = true : this.nextButton = false;
   }
   paginatorClicked(buttonValue) {
-    if (buttonValue === 'next') {
-      this.nextPage();
-    } else {
-      this.backPage();
-    }
+    buttonValue === 'next' ?
+      this.nextPage() : this.backPage();
   }
   nextPage() {
     this.cycleProducts(this.PAGINATOR_COUNT);
@@ -96,9 +81,8 @@ export class ProductListComponent implements OnInit, DoCheck {
     this.num1 += input;
     this.num2 += input;
     const itemsLeft = this.products.length - this.num2;
-    if (this.num1 === 0) {
-      this.backButton = false;
-    }
+    if (this.num1 === 0) this.backButton = false;
+
     if (itemsLeft < this.PAGINATOR_COUNT) {
       this.nextButton = false;
     }
