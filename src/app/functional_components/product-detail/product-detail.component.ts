@@ -11,7 +11,7 @@ import { AddToCartService } from '../../add-to-cart.service';
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css'],
-  providers: [ ProductService, AddToCartService ]
+  providers: [ProductService, AddToCartService]
 })
 export class ProductDetailComponent implements OnInit {
   public numberOfItems;
@@ -22,17 +22,17 @@ export class ProductDetailComponent implements OnInit {
 
 
   constructor(private route: ActivatedRoute,
-              private location: Location,
-              private productService: ProductService,
-              private addToCartService: AddToCartService,
-              private myRouter: Router
-) { }
+    private location: Location,
+    private productService: ProductService,
+    private addToCartService: AddToCartService,
+    private myRouter: Router
+  ) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.productId = urlParameters['id'];
     });
-     this.productService.getProductById(this.productId).subscribe( dataEmitted => {
+    this.productService.getProductById(this.productId).subscribe(dataEmitted => {
       this.productToDisplay = dataEmitted;
     });
   }
@@ -45,7 +45,7 @@ export class ProductDetailComponent implements OnInit {
     document.getElementById('homies').innerHTML = this.productToDisplay.Body;
   }
   continueShoppingWasClicked() {
-    window.history.back();
+    this.myRouter.navigate(['products/all']);
   }
   myCartButtonWasClicked() {
     this.myRouter.navigate(['cart']);

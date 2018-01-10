@@ -10,6 +10,10 @@
     width: 100%;
   }
 }
+
+.flexChild:hover {
+  cursor: pointer;
+}
 .panel {
   width: 50%;
   text-align: center;
