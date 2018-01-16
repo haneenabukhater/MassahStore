@@ -10,22 +10,23 @@
     width: 100%;
   }
 }
-
-.flexChild:hover {
-  cursor: pointer;
-}
-.panel {
+.flexChild {
   width: 50%;
   text-align: center;
   max-width: 600px;
 }
+
+.panel:hover {
+  cursor: pointer;
+}
 .itemInfo {
   display: block;
-  float: right;
   margin-left: 5px;
+  margin: auto;
 }
 
 .panel-heading {
+  text-align: center;
   margin-top: 0.4em;
   font-size: 2em;
   color: darkblue;
