@@ -50,7 +50,8 @@ export class ProductListComponent implements OnInit, DoCheck {
         ? this.productsAll
         : this.productsAll.filter(product => {
             return (
-              product.Tags === undefined || product.Tags.includes(this.category)
+              product.Tags.includes(this.category) ||
+              product.Type === this.category
             );
           });
   }
