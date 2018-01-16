@@ -16,7 +16,7 @@
   max-width: 600px;
 }
 
-.panel:hover {
+.product_heading:hover {
   cursor: pointer;
 }
 .itemInfo {

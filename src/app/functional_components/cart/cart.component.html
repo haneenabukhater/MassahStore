@@ -4,7 +4,7 @@
     <button class="btn btn-outline-primary" routerLink="/products/all">Shop Now!</button>
   </div>
   <div *ngFor="let item of objectsArray" class="flexChild container panel panel-default">
-    <div class="panel-heading">{{item.Title}}</div>
+    <div class="panel-heading product_heading" (click)="productWasClicked(item)">{{item.Title}}</div>
     <div class="panel-body">
       <img src={{item.Image_Src}} alt="" width="150px" height="150px">
       <div class="itemInfo">
@@ -27,12 +27,4 @@
     </div>
   </div>
 </div>
-
-
-<!-- Summary -->
 <app-checkout *ngIf="subTotal" [subTotal]="subTotal"></app-checkout>
-<br>
-<br>
-
-<br>
-<br>
