@@ -2,7 +2,7 @@
   <div class="electricBoogaloo panel panel-default">
     <img src={{productToDisplay.Image_Src}} alt="" width="300px" height="400px">
     <div class="panel-footer">
-      <div id="detailsFooter" *ngIf="!displayContinueShoppingMessage">
+      <div id="detailsFooter" *ngIf="!continueShopMessage">
         <h3>{{productToDisplay.Title}}</h3>
         <button class="showDetails" (click)="printBody($event)" name="button">Show Details...</button>
         <p id="homies"></p>

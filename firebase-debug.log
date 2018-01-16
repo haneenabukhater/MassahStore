@@ -1,0 +1,32 @@
+[debug] [2018-01-10T23:48:21.906Z] ----------------------------------------------------------------------
+[debug] [2018-01-10T23:48:21.909Z] Command:       /home/evanrjohnso/.nvm/versions/node/v8.4.0/bin/node /home/evanrjohnso/.nvm/versions/node/v8.4.0/bin/firebase serve
+[debug] [2018-01-10T23:48:21.909Z] CLI Version:   3.16.0
+[debug] [2018-01-10T23:48:21.909Z] Platform:      linux
+[debug] [2018-01-10T23:48:21.909Z] Node Version:  v8.4.0
+[debug] [2018-01-10T23:48:21.909Z] Time:          Wed Jan 10 2018 15:48:21 GMT-0800 (PST)
+[debug] [2018-01-10T23:48:21.909Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-10T23:48:21.918Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-10T23:48:21.919Z] > authorizing via signed-in user
+[debug] [2018-01-10T23:48:21.920Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/massahcollection  
+  
+ Wed Jan 10 2018 15:48:21 GMT-0800 (PST)
+[debug] [2018-01-10T23:48:22.502Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-10T23:48:22.503Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/massahcollection/tokens  
+  
+ Wed Jan 10 2018 15:48:22 GMT-0800 (PST)
+[debug] [2018-01-10T23:48:23.251Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/evanrjohnso/Desktop/Epicodus/Angular2/MassahStore'...
+[info] 
+[debug] [2018-01-10T23:48:23.254Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/massahcollection  
+  
+ Wed Jan 10 2018 15:48:23 GMT-0800 (PST)
+[debug] [2018-01-10T23:48:23.763Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-10T23:48:23.763Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/36370559819/clients/_:getWebAppConfig  
+  
+ Wed Jan 10 2018 15:48:23 GMT-0800 (PST)
+[debug] [2018-01-10T23:48:24.403Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist
+[info] ✔  hosting: Local server: http://localhost:5000
+
