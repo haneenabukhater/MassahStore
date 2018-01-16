@@ -78,6 +78,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 4. Links to images coming from an async call, need to cache for future
 5. Cart total is stored in session
 6. Contact us mobile styling. Fixed px right now
+7. From scarves to all products, next button disappears
 
 
 ## Support and contact details

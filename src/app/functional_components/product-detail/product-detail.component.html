@@ -1,0 +1,22 @@
+<div class="flexinTwo container">
+  <div class="electricBoogaloo panel panel-default">
+    <img src={{productToDisplay.Image_Src}} alt="" width="300px" height="400px">
+    <div class="panel-footer">
+      <div id="detailsFooter" *ngIf="!continueShopMessage">
+        <h3>{{productToDisplay.Title}}</h3>
+        <button class="showDetails" (click)="printBody($event)" name="button">Show Details...</button>
+        <p id="homies"></p>
+        <h4>${{productToDisplay.Variant_Price}}.00</h4>
+        <div class="qty">
+          <label>Qty</label>
+          <select #quantity name={{productToDisplay.Title}}>
+            <option value={{num}} *ngFor="let num of nums" [selected]="num==1">{{num}}</option>
+          </select>
+        </div>
+        <button (click)="addToCart(quantity.value)" class="btn btn-warning">Add to cart</button>
+        <button type="button" class="btn btn-info" (click)="handleShop('shopping')">Continue Shopping</button>
+      </div>
+      <app-more-shopping-buttons [display]="continueShopMessage" (buttonClicked)="handleShop($event)"></app-more-shopping-buttons>
+    </div>
+  </div>
+</div>

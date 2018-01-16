@@ -1,0 +1,19 @@
+<div *ngFor="let item of items" class="flexChild container panel panel-default">
+  <div class="panel-heading product_heading" (click)="productWasClicked(item)">{{item.Title}}</div>
+  <div class="panel-body">
+    <img src={{item.Image_Src}} alt="" width="150px" height="150px">
+    <div class="itemInfo">
+      <h5>Color:
+        <span class="itemDetails"></span>
+      </h5>
+      <label>Qty</label>
+      <select #quantity name={{item.Title}}>
+        <option value={{num}} *ngFor="let num of nums" [selected]="num==item.quantityInCart">{{num}}</option>
+      </select>
+      <h5>Price: $ {{item.Variant_Price}}</h5>
+      <h5>subTotal: $ {{item.quantityInCart * item.Variant_Price}}</h5>
+      <button class="btn btn-info" (click)="handleUpdate(item, quantity.value)">Update</button>
+      <button class="btn btn-warning" (click)="productWasClicked(item)">Details</button>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Product } from './product.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -11,7 +10,7 @@ export class ProductService {
   getProducts(){
     return this.database.list('products');
   }
-  getProductById(productId: string) {
+    getProductById(productId: string) {
    return this.database.object('products/' + productId);
  }
  removeProduct() {

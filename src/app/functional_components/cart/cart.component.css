@@ -1,0 +1,31 @@
+.flexParent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 518px) {
+  .panel-default {
+    width: 100%;
+  }
+}
+.flexChild {
+  width: 50%;
+  text-align: center;
+  max-width: 600px;
+}
+
+.product_heading:hover {
+  cursor: pointer;
+}
+
+.panel-heading {
+  text-align: center;
+  margin-top: 0.4em;
+  font-size: 2em;
+  color: darkblue;
+}
+.checkout_body {
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+nav {
+  border: 1px solid black;
+}
+
+#dropdowns {
+  margin-bottom: 10px;
+}
+
+#dropdowns a:hover {
+  background-color: rgb(0, 175, 228);
+  cursor: pointer;
+}
+
+#collections {
+  margin-top: 5px;
+}
+
+.navbar-brand {
+  margin-bottom: 10px;
+}
+
+.navbar-right {
+  margin-left: 3em;
+}
+
+.nav-item {
+  padding-left: 3em;
+  color: black;
+}
+
+@media only screen and (max-width: 518px) {
+  .navbar-right {
+    margin-left: -15px;
+  }
+}

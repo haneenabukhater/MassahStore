@@ -1,0 +1,5 @@
+<div class="flexParent">
+  <app-empty-cart *ngIf="!objectsArray"></app-empty-cart>
+  <app-cart-item [items]="objectsArray" (updateCart)="updateButtonWasClicked($event)"></app-cart-item>
+</div>
+<app-checkout [subTotal]="subTotal"></app-checkout>
