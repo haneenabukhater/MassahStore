@@ -1,7 +1,7 @@
 <div class="flexParent">
   <app-empty-cart *ngIf="!objectsArray"></app-empty-cart>
-
-  <div *ngFor="let item of objectsArray" class="flexChild container panel panel-default">
+  <app-cart-item [items]="objectsArray" (updateCart)="updateButtonWasClicked($event)"></app-cart-item>
+  <!--<div *ngFor="let item of objectsArray" class="flexChild container panel panel-default">
     <div class="panel-heading product_heading" (click)="productWasClicked(item)">{{item.Title}}</div>
     <div class="panel-body">
       <img src={{item.Image_Src}} alt="" width="150px" height="150px">
@@ -23,6 +23,6 @@
         <button class="btn btn-warning" (click)="productWasClicked(item)">Details</button>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>
 <app-checkout *ngIf="subTotal" [subTotal]="subTotal"></app-checkout>

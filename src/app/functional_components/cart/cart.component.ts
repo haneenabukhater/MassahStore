@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+// import { Router } from "@angular/router";
 
 import { AddToCartService } from "../../add-to-cart.service";
 import { FirebaseListObservable } from "angularfire2/database";
@@ -16,11 +16,9 @@ import * as Rx from "rxjs";
 export class CartComponent implements OnInit {
   objectsArray: any[] = null;
   subTotal: "";
-  nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   constructor(
     private addToCartService: AddToCartService,
-    private productService: ProductService,
-    private router: Router
+    private productService: ProductService // private router: Router
   ) {}
 
   ngOnInit() {
@@ -28,9 +26,6 @@ export class CartComponent implements OnInit {
       this.objectsArray = [];
       this.loadCartFromSessionStorage();
     }
-  }
-  productWasClicked(product) {
-    this.router.navigate(["products/item", product.$key]);
   }
 
   loadCartFromSessionStorage() {
@@ -54,10 +49,9 @@ export class CartComponent implements OnInit {
       return accumulator + current.Variant_Price * current.quantityInCart;
     }, 0);
   }
-
-  updateButtonWasClicked(clickedItem, newQuantity) {
-    const difference = clickedItem.quantityInCart - Number(newQuantity);
-    this.addToCartService.removeItemFromCart(clickedItem.$key, -difference);
+  updateButtonWasClicked(item) {
+    const difference = item.item.quantityInCart - Number(item.quantity);
+    this.addToCartService.removeItemFromCart(item.item.$key, -difference);
     this.loadCartFromSessionStorage();
   }
 }
