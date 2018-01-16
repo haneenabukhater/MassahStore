@@ -19,11 +19,6 @@
 .product_heading:hover {
   cursor: pointer;
 }
-.itemInfo {
-  display: block;
-  margin-left: 5px;
-  margin: auto;
-}
 
 .panel-heading {
   text-align: center;

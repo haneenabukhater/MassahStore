@@ -1,8 +1,6 @@
 <div class="flexParent">
-  <div class="flexChild container" *ngIf="!objectsArray">
-    <h2>Your cart appears to be empty.</h2>
-    <button class="btn btn-outline-primary" routerLink="/products/all">Shop Now!</button>
-  </div>
+  <app-empty-cart *ngIf="!objectsArray"></app-empty-cart>
+
   <div *ngFor="let item of objectsArray" class="flexChild container panel panel-default">
     <div class="panel-heading product_heading" (click)="productWasClicked(item)">{{item.Title}}</div>
     <div class="panel-body">

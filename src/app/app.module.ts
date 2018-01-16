@@ -33,6 +33,7 @@ import { SubscribeComponent } from "./structural_components/footer/subscribe/sub
 import { FooterLinksComponent } from "./structural_components/footer/footer-links/footer-links.component";
 import { SocialIconsComponent } from "./structural_components/footer/social-icons/social-icons.component";
 import { MoreShoppingButtonsComponent } from "./functional_components/product-detail/more-shopping-buttons/more-shopping-buttons.component";
+import { EmptyCartComponent } from './functional_components/cart/empty-cart/empty-cart.component';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -61,7 +62,8 @@ export const db = {
     SubscribeComponent,
     FooterLinksComponent,
     SocialIconsComponent,
-    MoreShoppingButtonsComponent
+    MoreShoppingButtonsComponent,
+    EmptyCartComponent
   ],
   imports: [
     BrowserModule,
