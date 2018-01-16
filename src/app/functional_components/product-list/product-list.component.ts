@@ -1,14 +1,14 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
-import { Router } from '@angular/router';
-import { ActivatedRoute, Params } from '@angular/router';
-import { ProductService } from '../../product.service';
-import { FirebaseListObservable } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit, DoCheck } from "@angular/core";
+import { Router } from "@angular/router";
+import { ActivatedRoute, Params } from "@angular/router";
+import { ProductService } from "../../product.service";
+import { FirebaseListObservable } from "angularfire2/database";
+import { Observable } from "rxjs/Observable";
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: "app-product-list",
+  templateUrl: "./product-list.component.html",
+  styleUrls: ["./product-list.component.css"]
 })
 export class ProductListComponent implements OnInit, DoCheck {
   category: string;
@@ -45,11 +45,14 @@ export class ProductListComponent implements OnInit, DoCheck {
     this.backButton = false;
   }
   filterProductsByCategory() {
-    this.products = this.category === 'all' ?
-        this.productsAll :
-        this.productsAll.filter(product => {
-          return product.Tags === undefined || product.Tags.includes(this.category);
-        });
+    this.products =
+      this.category === "all"
+        ? this.productsAll
+        : this.productsAll.filter(product => {
+            return (
+              product.Tags === undefined || product.Tags.includes(this.category)
+            );
+          });
   }
   grabAllProductsFromFireBase() {
     this.productService.getProducts().subscribe(lastData => {
@@ -60,15 +63,14 @@ export class ProductListComponent implements OnInit, DoCheck {
     this.category = this.currentRoute.snapshot.params.category;
   }
   productWasClicked(clickedProduct) {
-    this.myRouter.navigate(['products/item', clickedProduct.$key]);
+    this.myRouter.navigate(["products/item", clickedProduct.$key]);
   }
   evaluateNextButton() {
-    this.products.length > this.PAGINATOR_COUNT ?
-      this.nextButton = true : this.nextButton = false;
+    const productsLeft = this.products.length - this.num2;
+    this.nextButton = productsLeft > 0 ? true : false;
   }
   paginatorClicked(buttonValue) {
-    buttonValue === 'next' ?
-      this.nextPage() : this.backPage();
+    buttonValue === "next" ? this.nextPage() : this.backPage();
   }
   nextPage() {
     this.cycleProducts(this.PAGINATOR_COUNT);
