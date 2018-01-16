@@ -56,14 +56,3 @@ export class NavBarComponent implements OnInit {
     }
   }
 }
-// namespace Vehicle {
-//   class Car {
-//     constructor(make: string, model: string) {
-//       this.model = model || null;
-//     }
-//   }
-//   var audiCar = new Car("Audi", "Q7");
-// }
-// export class Vehicle {}
-
-// var fordCar = `Vehicle`.Car("Ford", "Figo");
