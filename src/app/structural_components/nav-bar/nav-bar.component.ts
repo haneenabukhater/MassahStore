@@ -47,6 +47,7 @@ export class NavBarComponent implements OnInit {
   }
 
   handleNavButtonClick() {
+    if (window.innerWidth > 400) return;
     const $navbar = document.getElementById("navbarResponsive");
     const _closed = $navbar.classList.contains("collapse");
     if (_closed) {
